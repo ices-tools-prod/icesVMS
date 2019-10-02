@@ -1,0 +1,13 @@
+Package: icesVMS
+Version: 1.0-0
+Date: 2019-10-02
+Title: Functions to link to the ICES VMS and logbook database webservices
+Authors@R: c(person("Colin", "Millar", role=c("aut","cre"), email="colin.millar@ices.dk"),
+             person("Carlos", "Pinto", role="ctb"))
+Imports: httr, askpass
+Description: Functions to link to the ICES VMS and logbook database webservices to allow
+  users to download summaries and data products from the ICES VMS and logbook database.
+License: GPL (>= 2)
+URL: https://www.ices.dk/marine-data/tools/Pages/WebServices.aspx
+Encoding: UTF-8
+RoxygenNote: 6.1.1

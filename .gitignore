@@ -34,3 +34,5 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+# JWT token for access to ICES vms web services
+.ices-jwt
