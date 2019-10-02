@@ -1,4 +1,6 @@
 --------------------------------------------------------------------------------
 icesVMS 1.0-0 (2019-10-02)
 --------------------------------------------------------------------------------
-o Initial release, with two functions: update_token() and getVMS().
+o Initial release, with four functions: update_token() and getVMS(), 
+  getGearWidths(), getMetierLookup().
+  

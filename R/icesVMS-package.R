@@ -12,7 +12,16 @@
 #'
 #' @details
 #' 
-#' to come later
+#' \emph{Download data:}
+#' \tabular{ll}{
+#'   \code{\link{get_benthis_parameters}}     \tab download gear contact model parameters\cr
+#'   \code{\link{get_metier_lookup}} \tab download metier to gear category lookup table\cr
+#'   \code{\link{get_vms}}         \tab download VMS data
+#' }
+#' \emph{Authentication:}
+#' \tabular{ll}{
+#'   \code{\link{update_token}}     \tab update the token for the current project
+#' }
 #'
 #' @author Colin Millar.
 #'
