@@ -17,8 +17,8 @@ update_token <- function(user) {
 
   if (httr::status_code(res) == 200) {
     jwt <- httr::content(res)
-    cat("\n# JWT token for access to ICES vms web services\n.ices-jwt\n", file = ".gitignore", append = file.exists(".gitignore"))
-    cat(jwt$token, "\n", file = ".ices-jwt", sep = "")
+    cat(jwt$token, "\n", sep = "",
+        file = file.path(tempdir(), ".ices-jwt"))
     return(TRUE)
   } else {
     return(FALSE)
