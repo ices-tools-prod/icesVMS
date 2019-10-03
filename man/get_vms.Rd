@@ -4,11 +4,32 @@
 \alias{get_vms}
 \title{Download VMS data}
 \usage{
-get_vms()
+get_vms(country, year, month, c_square, gear_code, metier, stat_rec,
+  ices_area, ecoregion)
+}
+\arguments{
+\item{country}{country code}
+
+\item{year}{integer year}
+
+\item{month}{integer month}
+
+\item{c_square}{character 0.05 degree c-square name}
+
+\item{gear_code}{benthis gear code}
+
+\item{metier}{level 6 metier code}
+
+\item{stat_rec}{ICES statistical rectangle}
+
+\item{ices_area}{ICES area}
+
+\item{ecoregion}{ICES ecoregion}
 }
 \value{
 a data.frame of VMS data
 }
 \description{
+RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
 Download a data.frame of VMS data from the ICES VMS and logbook database.
 }
