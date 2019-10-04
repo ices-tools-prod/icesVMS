@@ -14,16 +14,6 @@ get_csquare(c_square, stat_rec, ices_area, ecoregion)
 \item{ices_area}{ICES area}
 
 \item{ecoregion}{ICES ecoregion}
-
-\item{country}{country code}
-
-\item{year}{integer year}
-
-\item{month}{integer month}
-
-\item{gear_code}{benthis gear code}
-
-\item{metier}{level 6 metier code}
 }
 \value{
 a data.frame of VMS data

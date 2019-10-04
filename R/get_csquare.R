@@ -3,12 +3,7 @@
 #' RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
 #' Download a data.frame of VMS data from the ICES VMS and logbook database.
 #' 
-#' @param country country code
-#' @param year integer year
-#' @param month integer month
 #' @param c_square character 0.05 degree c-square name
-#' @param gear_code benthis gear code
-#' @param metier level 6 metier code
 #' @param stat_rec ICES statistical rectangle
 #' @param ices_area ICES area
 #' @param ecoregion ICES ecoregion
