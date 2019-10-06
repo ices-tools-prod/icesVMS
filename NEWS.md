@@ -1,3 +1,8 @@
+# icesVMS 1.0.0.9003
+
+* add get_effort_map() function
+
+
 # icesVMS 1.0.0.9002
 
 * add get_fo_effort() fisheries overviews effort function
