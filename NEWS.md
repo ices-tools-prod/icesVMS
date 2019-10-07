@@ -1,3 +1,8 @@
+# icesVMS 1.0.0.9004
+
+* add get_fo_landings()
+
+
 # icesVMS 1.0.0.9003
 
 * add get_effort_map() function
