@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_sar_map.R
 \name{get_sar_map}
 \alias{get_sar_map}
-\title{Download fishing effort summaries}
+\title{Download swept area ratio map data}
 \usage{
 get_sar_map(ecoregion, year = NULL)
 }
@@ -15,10 +15,10 @@ get_sar_map(ecoregion, year = NULL)
 a data.frame with a WKT column for the c-square polygons
 }
 \description{
-Download a data.frame of kw fishing hours by country and year for a
-given ICES ecoregion.
+Download a data.frame of surface and subsurface swept area 
+ratio by c-square for a given ICES ecoregion.
 }
 \details{
-The spatial data.frame contains average annual mw fishing hours,
-averaged over 4 years.
+The spatial data.frame contains average annual surface-sar 
+and subsurface-sar averaged over 4 years.
 }

@@ -1,7 +1,7 @@
-#' Download fishing effort summaries
+#' Download swept area ratio map data
 #' 
-#' Download a data.frame of kw fishing hours by country and year for a
-#' given ICES ecoregion.
+#' Download a data.frame of surface and subsurface swept area 
+#' ratio by c-square for a given ICES ecoregion.
 #' 
 #' @param ecoregion ICES ecoregion
 #' @param year which year to select (see details)
@@ -10,14 +10,14 @@
 #' 
 #' @details
 #' 
-#' The spatial data.frame contains average annual mw fishing hours,
-#' averaged over 4 years.
+#' The spatial data.frame contains average annual surface-sar 
+#' and subsurface-sar averaged over 4 years.
 #' 
 #' @export
 get_sar_map <- function(ecoregion, year = NULL) {  
   url <- 
     httr::parse_url(
-      paste0("https://taf.ices.dk/vms/api/fisheriesoverviews/effortmap/", 
+      paste0("https://taf.ices.dk/vms/api/fisheriesoverviews/sarmap/", 
              utils::URLencode(ecoregion)))
   if (!is.null(year)) {
     url$query <- list(year = year)
