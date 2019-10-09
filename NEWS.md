@@ -1,3 +1,8 @@
+# icesVMS 1.0.0.9006
+
+* add get_wgfbit_data2()
+
+
 # icesVMS 1.0.0.9005
 
 * added function get_wgfbit_data1()
