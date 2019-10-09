@@ -1,3 +1,9 @@
+# icesVMS 1.0.0.9005
+
+* added function get_wgfbit_data1()
+* add get_sar_map() function
+
+
 # icesVMS 1.0.0.9004
 
 * add get_fo_landings()
