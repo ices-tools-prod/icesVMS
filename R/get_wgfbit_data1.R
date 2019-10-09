@@ -20,7 +20,7 @@ get_wgfbit_data1 <- function(ecoregion, year, fishing_category = NULL, benthis_m
   url <- 
     httr::parse_url(
       paste0("https://taf.ices.dk/vms/api/wgfbit/dataset1/", 
-             utils::URLencode(ecoregion), "", year))
+             utils::URLencode(ecoregion), "/", year))
   
   if (!is.null(fishing_category)) {
     url$query <- list(fishing_category = fishing_category)
