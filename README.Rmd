@@ -47,9 +47,27 @@ Examples
 
 ## Download c square information
 
-All of the VMS data submitted to ICES is at the c square level (concise spatial query and representation system, [@reese03_csquares])
+All of the VMS data submitted to ICES is at the c square level (concise spatial query and representation system, [@reese03_csquares]), and to aid in the exploration of display of data summaries extracted from the ICES VMS/Logbook database there is a service to extract information related to a C square. For example, the following code returns a table of all the c squares in the Celtic Seas ecoregion (see https://ices.dk/community/advisory-process/Pages/ICES-ecosystems-and-advisory-areas.aspx): 
+
+```{r, eval = 3}
+celtic <- get_csquare(ecoregion = "Celtic Seas")
+sr_32D5 <- get_csquare(stat_rec="32D5")
+get_csquare(c_square = "7501:114:383:4")
+```
+
+These can be plotted by parseing the WKT (Well Known Text, https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) feild and then using `ggplot2`, for example, to convert and them plot:
+
+```{r}
+ukwest <- get_csquare(ices_area = "6a")
+ukwest <- sf::st_as_sf(ukwest, wkt = "wkt", crs = 4326)
+
+ggplot2::ggplot() +
+  ggplot2::geom_sf(data = ukwest, color = "lightblue", fill = "transparent")
+```
+
 
 ## Download bottom contact model parameters (BENTHIS)
 
 To calculate swept area ratio by c_square
 
+# References
