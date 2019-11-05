@@ -56,8 +56,6 @@ the c squares in the Celtic Seas ecoregion (see
 get_csquare(c_square = "7501:114:383:4")
 ```
 
-    ## status code: 200
-
     ##   csquare_area
     ## 1     19.08342
     ##                                                                       wkt
@@ -71,18 +69,13 @@ feild and then using `ggplot2`, for example, to convert and them plot:
 
 ``` r
 ukwest <- get_csquare(ices_area = "6a")
-```
-
-    ## status code: 200
-
-``` r
 ukwest <- sf::st_as_sf(ukwest, wkt = "wkt", crs = 4326)
 
 ggplot2::ggplot() +
   ggplot2::geom_sf(data = ukwest, color = "lightblue", fill = "transparent")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/plot_csquares_6a-1.png)<!-- -->
 
 ## Download bottom contact model parameters (BENTHIS)
 
