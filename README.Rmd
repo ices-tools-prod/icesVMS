@@ -83,7 +83,7 @@ These high level gear categories refered to as `BenthisMet` are connected to low
 
 ```{r metier_lookup, echo = 1, results = 'asis', message = FALSE}
 metiers <- get_metier_lookup()
-kable(metiers[,1:10])
+kable(metiers[1:10,c(2,4,6,7,11)])
 ```
 
 
