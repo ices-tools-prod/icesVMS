@@ -74,9 +74,16 @@ ggplot2::ggplot() +
 
 To calculate swept area ratio by c_square, ICES uses methods developed by the BENTHIS project and within the WGSFD in which gear codes are used to imply the area swept by the gear for a given fishing speed.  The parameters are available via:
 
-```{r, echo = 1, results = 'asis'}
+```{r benthis, echo = 1, results = 'asis', message = FALSE}
 benthis <- get_benthis_parameters()
 kable(benthis)
+```
+
+These high level gear categories refered to as `BenthisMet` are connected to lower level metiers via a lookup table maintianed by the WGSFD and avaialbe via:
+
+```{r metier_lookup, echo = 1, results = 'asis', message = FALSE}
+metiers <- get_metier_lookup()
+kable(metiers[,1:10])
 ```
 
 
