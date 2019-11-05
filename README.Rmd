@@ -12,6 +12,10 @@ bibliography: README.bib
 
 [<img align="right" alt="ICES Logo" width="17%" height="17%" src="http://ices.dk/_layouts/15/1033/images/icesimg/iceslogo.png">](http://ices.dk)
 
+```{r, setup, show = FALSE}
+library(knitr)
+```
+
 icesVMS
 =======
 
@@ -55,7 +59,7 @@ sr_32D5 <- get_csquare(stat_rec="32D5")
 get_csquare(c_square = "7501:114:383:4")
 ```
 
-These can be plotted by parseing the WKT (Well Known Text, https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) feild and then using `ggplot2`, for example, to convert and them plot:
+These can be plotted by parsing the WKT (Well Known Text, https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) field (here using the `sf` package) and then plotting using `ggplot2`, for example:
 
 ```{r plot_csquares_6a, message = FALSE}
 ukwest <- get_csquare(ices_area = "6a")
@@ -68,6 +72,12 @@ ggplot2::ggplot() +
 
 ## Download bottom contact model parameters (BENTHIS)
 
-To calculate swept area ratio by c_square
+To calculate swept area ratio by c_square, ICES uses methods developed by the BENTHIS project and within the WGSFD in which gear codes are used to imply the area swept by the gear for a given fishing speed.  The parameters are available via:
+
+```{r, echo = 1, results = 'asis'}
+benthis <- get_benthis_parameters()
+kable(benthis)
+```
+
 
 # References
