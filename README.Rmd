@@ -14,6 +14,7 @@ bibliography: README.bib
 
 ```{r, setup, show = FALSE}
 library(knitr)
+library(icesVMS)
 ```
 
 icesVMS
@@ -86,5 +87,13 @@ metiers <- get_metier_lookup()
 kable(metiers[1:10,c(2,4,6,7,11)])
 ```
 
+## Total landings by country
+
+The VMS/Logbook database also gives access to total landings by country and year.  This information is used in the ICES Fisheries Overviews. All data used in the Fisheries Overviews is published where possible, so this function provides open access to the aggregated landings weights.
+
+```{r landings, echo = 1, results = 'asis', message = FALSE}
+benthis <- get_benthis_parameters()
+kable(benthis)
+```
 
 # References
