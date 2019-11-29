@@ -1,3 +1,8 @@
+# icesVMS 1.0.0.9007
+
+* add nyears argument to get_sar_map()
+
+
 # icesVMS 1.0.0.9006
 
 * add get_wgfbit_data2()
