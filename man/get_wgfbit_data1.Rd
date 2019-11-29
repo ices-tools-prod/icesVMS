@@ -4,8 +4,12 @@
 \alias{get_wgfbit_data1}
 \title{Download swept area ratio, landings and value map data}
 \usage{
-get_wgfbit_data1(ecoregion, year, fishing_category = NULL,
-  benthis_metier = NULL)
+get_wgfbit_data1(
+  ecoregion,
+  year,
+  fishing_category = NULL,
+  benthis_metier = NULL
+)
 }
 \arguments{
 \item{ecoregion}{ICES ecoregion}

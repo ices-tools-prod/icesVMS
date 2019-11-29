@@ -4,8 +4,17 @@
 \alias{get_vms}
 \title{Download VMS data}
 \usage{
-get_vms(country, year, month, c_square, gear_code, metier, stat_rec,
-  ices_area, ecoregion)
+get_vms(
+  country,
+  year,
+  month,
+  c_square,
+  gear_code,
+  metier,
+  stat_rec,
+  ices_area,
+  ecoregion
+)
 }
 \arguments{
 \item{country}{country code}

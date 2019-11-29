@@ -1,2 +1,5 @@
 .travis.yml
 README.md
+README.Rmd
+README.bib
+^README_files$
