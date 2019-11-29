@@ -4,21 +4,24 @@
 \alias{get_sar_map}
 \title{Download swept area ratio map data}
 \usage{
-get_sar_map(ecoregion, year = NULL)
+get_sar_map(ecoregion, year = NULL, nyears = NULL)
 }
 \arguments{
 \item{ecoregion}{ICES ecoregion}
 
 \item{year}{which year to select (see details)}
+
+\item{nyears}{the number of years to take an average over}
 }
 \value{
 a data.frame with a WKT column for the c-square polygons
 }
 \description{
-Download a data.frame of surface and subsurface swept area 
+Download a data.frame of surface and subsurface swept area
 ratio by c-square for a given ICES ecoregion.
 }
 \details{
-The spatial data.frame contains average annual surface-sar 
-and subsurface-sar averaged over 4 years.
+The spatial data.frame contains average annual surface-sar
+and subsurface-sar averaged over 4 years by default.  If year
+is not specified (NULL) then the present year - 1 is assumed.
 }
