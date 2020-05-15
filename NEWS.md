@@ -1,3 +1,8 @@
+# icesVMS 1.0.0.9008
+
+* add get_passive_footprint()
+
+
 # icesVMS 1.0.0.9007
 
 * add nyears argument to get_sar_map()
