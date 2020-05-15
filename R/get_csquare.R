@@ -1,16 +1,16 @@
 #' Download VMS data
-#' 
+#'
 #' RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
 #' Download a data.frame of VMS data from the ICES VMS and logbook database.
-#' 
+#'
 #' @param c_square character 0.05 degree c-square name
 #' @param stat_rec ICES statistical rectangle
 #' @param ices_area ICES area
 #' @param ecoregion ICES ecoregion
-#' 
+#'
 #' @return a data.frame of VMS data
 #' @export
-get_csquare <- function(c_square, stat_rec, ices_area, ecoregion) {  
+get_csquare <- function(c_square, stat_rec, ices_area, ecoregion) {
   url <- httr::parse_url("https://taf.ices.dk/vms/api/csquares")
 
   args <- as.list(match.call())[-1]
@@ -34,4 +34,3 @@ get_csquare <- function(c_square, stat_rec, ices_area, ecoregion) {
 
   httr::content(res, simplifyVector = TRUE)
 }
-
