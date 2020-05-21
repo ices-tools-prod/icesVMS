@@ -19,7 +19,7 @@ vms_get <- function(url, retry = TRUE) {
     # try again - sometimes the server seems to return 404 on the
     # first request
     message("Server not responding, doing one retry.")
-    vms_get(404, retry = FALSE)
+    vms_get(url, retry = FALSE)
   }
 
   tryCatch(httr::stop_for_status(out),

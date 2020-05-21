@@ -37,5 +37,5 @@ get_vms <- function(country, year, month, c_square,
 
   out <- vms_get(url)
 
-  httr::content(vms, simplifyVector = TRUE)
+  httr::content(out, simplifyVector = TRUE)
 }

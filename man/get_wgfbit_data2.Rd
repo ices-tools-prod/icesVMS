@@ -15,6 +15,6 @@ get_wgfbit_data2(ecoregion, year)
 a data.frame with a WKT column for the c-square polygons
 }
 \description{
-Download a data.frame of surface and subsurface swept area 
+Download a data.frame of surface and subsurface swept area
 ratio by c-square for a given ICES ecoregion, year and gear code.
 }

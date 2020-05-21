@@ -28,7 +28,7 @@ get_sar_map <- function(ecoregion, year = NULL, nyears = NULL) {
 
   url <- httr::build_url(url)
 
-out <- vms_get(url)
+  out <- vms_get(url)
 
   httr::content(out, simplifyVector = TRUE)
 }
