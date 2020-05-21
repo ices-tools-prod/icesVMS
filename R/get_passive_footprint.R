@@ -5,6 +5,7 @@
 #'
 #' @param ecoregion ICES ecoregion
 #' @param year which year to select
+#' @param metier_level4 optional gear code (metier level 4) ("FPO")
 #'
 #' @return a data.frame with a WKT column for the c-square polygons
 #'
@@ -17,7 +18,7 @@
 #' targeting small and large pelagic fish).
 #'
 #' @export
-get_passive_footprint <- function(ecoregion, year) {
+get_passive_footprint <- function(ecoregion, year, metier_level4 = NULL) {
   url <-
     httr::parse_url(
       paste0(
@@ -27,8 +28,8 @@ get_passive_footprint <- function(ecoregion, year) {
       )
     )
 
-  url <- httr::build_url(url)
-
+  if (!is.null(metier_level4)) {
+    url$query <- list(metier_level4 = metier_level4)
   }
 
   url <- httr::build_url(url)
