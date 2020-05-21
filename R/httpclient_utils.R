@@ -23,10 +23,11 @@ vms_get <- function(url, retry = TRUE) {
   }
 
   tryCatch(httr::stop_for_status(out),
-    http_404 = function(c) "Url doesn't exist - the server may not responding.",
-    http_403 = function(c) "You need to authenticate - run update_token(...)",
-    http_401 = function(c) "You don't have access to this resource.",
-    http_500 = function(c) "Something went wrong on the server :("
+    http_404 = function(c) message("Url doesn't exist - the server may not responding."),
+    http_403 = function(c) message("You need to authenticate - run update_token(...)"),
+    http_401 = function(c) message("You don't have access to this resource."),
+    http_400 = function(c) message("Check function arguments, probably a user error."),
+    http_500 = function(c) message("Something went wrong on the server :(")
   )
 
   return(out)
