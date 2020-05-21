@@ -11,5 +11,5 @@ get_benthis_parameters <- function() {
 
   out <- vms_get(url)
 
-  httr::content(vms, simplifyVector = TRUE)
+  httr::content(out, simplifyVector = TRUE)
 }
