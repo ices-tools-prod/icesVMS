@@ -28,16 +28,7 @@ get_sar_map <- function(ecoregion, year = NULL, nyears = NULL) {
 
   url <- httr::build_url(url)
 
-  jwt <- ""
-  if (file.exists(file.path(tempdir(), ".ices-jwt"))) {
-      jwt <- readLines(file.path(tempdir(), ".ices-jwt"), n = 1)
-  }
-
-  out <-
-    httr::GET(url,
-              httr::add_headers(Authorization = paste("Bearer", jwt)))
-
-  message(paste("status code:", httr::status_code(out)))
+out <- vms_get(url)
 
   httr::content(out, simplifyVector = TRUE)
 }

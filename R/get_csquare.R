@@ -28,9 +28,7 @@ get_csquare <- function(c_square, stat_rec, ices_area, ecoregion) {
   url$query <- as.list(match.call())[-1]
   url <- httr::build_url(url)
 
-  res <- httr::GET(url)
-
-  message(paste("status code:", httr::status_code(res)))
+  out <- vms_get(url)
 
   httr::content(res, simplifyVector = TRUE)
 }

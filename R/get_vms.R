@@ -1,8 +1,8 @@
 #' Download VMS data
-#' 
+#'
 #' RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
 #' Download a data.frame of VMS data from the ICES VMS and logbook database.
-#' 
+#'
 #' @param country country code
 #' @param year integer year
 #' @param month integer month
@@ -12,12 +12,12 @@
 #' @param stat_rec ICES statistical rectangle
 #' @param ices_area ICES area
 #' @param ecoregion ICES ecoregion
-#' 
+#'
 #' @return a data.frame of VMS data
 #' @export
-get_vms <- function(country, year, month, c_square, 
-                    gear_code, metier, 
-                    stat_rec, ices_area, ecoregion) {  
+get_vms <- function(country, year, month, c_square,
+                    gear_code, metier,
+                    stat_rec, ices_area, ecoregion) {
   url <- httr::parse_url("https://taf.ices.dk/vms/api/vms")
 
   args <- as.list(match.call())[-1]
@@ -35,16 +35,7 @@ get_vms <- function(country, year, month, c_square,
   url$query <- as.list(match.call())[-1]
   url <- httr::build_url(url)
 
-  jwt <- ""
-  if (file.exists(file.path(tempdir(), ".ices-jwt"))) {
-      jwt <- readLines(file.path(tempdir(), ".ices-jwt"), n = 1)    
-  }
-
-  vms <-
-    httr::GET(url, 
-              httr::add_headers(Authorization = paste("Bearer", jwt)))
-
-  message(paste("status code:", httr::status_code(vms)))
+  out <- vms_get(url)
 
   httr::content(vms, simplifyVector = TRUE)
 }
