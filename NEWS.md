@@ -1,3 +1,8 @@
+# icesVMS 1.0.0.9010
+
+*  improved  get and add arg - metier_level4 to get_passive_footprint()
+
+
 # icesVMS 1.0.0.9009
 
 *  improved  get and add arg - metier_level4 to get_passive_footprint()
