@@ -1,3 +1,8 @@
+# icesVMS 1.0.0.9011
+
+* fixing bugs in url construction
+
+
 # icesVMS 1.0.0.9010
 
 *  bug fixes
