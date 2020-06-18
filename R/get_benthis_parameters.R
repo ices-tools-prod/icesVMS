@@ -7,7 +7,7 @@
 #' @return a data.frame
 #' @export
 get_benthis_parameters <- function() {
-  uri <- "https://taf.ices.dk/vms/api/"
+  url <- "https://taf.ices.dk/vms/api/gearwidths"
 
   out <- vms_get(url)
 

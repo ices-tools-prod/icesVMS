@@ -18,9 +18,10 @@
 get_vms <- function(country, year, month, c_square,
                     gear_code, metier,
                     stat_rec, ices_area, ecoregion) {
+
   url <- httr::parse_url("https://taf.ices.dk/vms/api/vms")
 
-  args <- as.list(match.call())[-1]
+  args <- lapply(as.list(match.call())[-1], eval, parent.frame())
   if (any(sapply(args, length) > 1)) {
     args_grid <- do.call(expand.grid, c(args, KEEP.OUT.ATTRS = FALSE, stringsAsFactors = FALSE))
 
@@ -32,7 +33,7 @@ get_vms <- function(country, year, month, c_square,
     return (do.call(rbind, out))
   }
 
-  url$query <- as.list(match.call())[-1]
+  url$query <- args
   url <- httr::build_url(url)
 
   out <- vms_get(url)
