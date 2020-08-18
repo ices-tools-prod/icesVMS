@@ -25,8 +25,8 @@ get_logbook <- function(country, year, month,
 
     args_list <- lapply(1:nrow(args_grid), function(i) as.list(args_grid[i, ]))
 
-    message("running ", length(args_list), " calls to get_vms().")
-    out <- lapply(args_list, function(args) do.call(get_vms, args))
+    message("running ", length(args_list), " calls to get_logbook().")
+    out <- lapply(args_list, function(args) do.call(get_logbook, args))
 
     return(do.call(rbind, out))
   }
