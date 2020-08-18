@@ -10,4 +10,4 @@ Description: Functions to link to the ICES VMS and logbook database webservices 
 License: file LICENSE
 URL: https://www.ices.dk/marine-data/tools/Pages/WebServices.aspx
 Encoding: UTF-8
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
