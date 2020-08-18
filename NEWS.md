@@ -1,3 +1,8 @@
+# icesVMS 1.0.0.9012
+
+* add get_logbook() to download logbook data
+
+
 # icesVMS 1.0.0.9011
 
 * fixing bugs in url construction
