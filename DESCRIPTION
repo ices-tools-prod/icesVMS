@@ -4,7 +4,7 @@ Date: 2020-08-18
 Title: Functions to link to the ICES VMS and logbook database webservices
 Authors@R: c(person("Colin", "Millar", role=c("aut","cre"), email="colin.millar@ices.dk"),
              person("Carlos", "Pinto", role="ctb"))
-Imports: httr, askpass
+Imports: httr, icesConnect
 Description: Functions to link to the ICES VMS and logbook database webservices to allow
   users to download summaries and data products from the ICES VMS and logbook database.
 License: file LICENSE

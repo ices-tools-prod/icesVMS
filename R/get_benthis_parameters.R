@@ -7,9 +7,7 @@
 #' @return a data.frame
 #' @export
 get_benthis_parameters <- function() {
-  url <- "https://taf.ices.dk/vms/api/gearwidths"
-
-  out <- vms_get(url)
+  out <- vms_get("https://taf.ices.dk/vms/api/gearwidths")
 
   httr::content(out, simplifyVector = TRUE)
 }

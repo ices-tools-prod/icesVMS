@@ -17,6 +17,8 @@
 #' within the GNS category: GNS_SPF and GNS_LPF (set gill nets
 #' targeting small and large pelagic fish).
 #'
+#' @importFrom httr build_url
+#'
 #' @export
 get_passive_footprint <- function(ecoregion, year, metier_level4 = NULL) {
   url <-

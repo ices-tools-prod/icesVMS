@@ -11,22 +11,18 @@
 #' users to download summaries and data products from the ICES VMS and logbook database.
 #'
 #' @details
-#' 
+#'
 #' \emph{Download data:}
 #' \tabular{ll}{
 #'   \code{\link{get_benthis_parameters}}     \tab download gear contact model parameters\cr
 #'   \code{\link{get_metier_lookup}} \tab download metier to gear category lookup table\cr
 #'   \code{\link{get_vms}}         \tab download VMS data
 #' }
-#' \emph{Authentication:}
-#' \tabular{ll}{
-#'   \code{\link{update_token}}     \tab update the token for the current project
-#' }
 #'
 #' @author Colin Millar.
 #'
 #' @references
 #' ICES web services: \url{https://www.ices.dk/marine-data/tools/Pages/WebServices.aspx}.
-#' 
+#'
 
 NA
