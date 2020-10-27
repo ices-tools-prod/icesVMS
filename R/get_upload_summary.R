@@ -7,7 +7,7 @@
 #'
 #' @return a data.frame of VMS summary data
 #' @export
-get_upload_summary <- function(year = NULL) {
+get_upload_summary <- function(datacall = NULL) {
 
   url <- httr::parse_url("https://taf.ices.dk/vms/api/vmssummary")
 

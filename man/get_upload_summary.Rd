@@ -4,7 +4,7 @@
 \alias{get_upload_summary}
 \title{Download a summary of submitted data}
 \usage{
-get_upload_summary(year = NULL)
+get_upload_summary(datacall = NULL)
 }
 \arguments{
 \item{datacall}{integer year giving which data call year to enquire about.
