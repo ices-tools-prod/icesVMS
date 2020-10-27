@@ -13,7 +13,8 @@ get_vms(
   metier,
   stat_rec,
   ices_area,
-  ecoregion
+  ecoregion,
+  datacall = NULL
 )
 }
 \arguments{
@@ -34,6 +35,9 @@ get_vms(
 \item{ices_area}{ICES area}
 
 \item{ecoregion}{ICES ecoregion}
+
+\item{datacall}{integer year giving which data call year to enquire about.
+If NULL returns the a summary of the most recent approved data.}
 }
 \value{
 a data.frame of VMS data

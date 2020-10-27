@@ -12,12 +12,14 @@
 #' @param stat_rec ICES statistical rectangle
 #' @param ices_area ICES area
 #' @param ecoregion ICES ecoregion
+#' @param datacall integer year giving which data call year to enquire about.
+#'   If NULL returns the a summary of the most recent approved data.
 #'
 #' @return a data.frame of VMS data
 #' @export
 get_vms <- function(country, year, month, c_square,
                     gear_code, metier,
-                    stat_rec, ices_area, ecoregion) {
+                    stat_rec, ices_area, ecoregion, datacall = NULL) {
 
   url <- httr::parse_url("https://taf.ices.dk/vms/api/vms")
 
