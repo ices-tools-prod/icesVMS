@@ -2,6 +2,10 @@
 
 export(get_benthis_parameters)
 export(get_csquare)
+export(get_datsu_session)
+export(get_datsu_session_detail)
+export(get_datsu_session_le)
+export(get_datsu_session_ve)
 export(get_effort_map)
 export(get_fo_effort)
 export(get_fo_landings)
