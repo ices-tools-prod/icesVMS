@@ -37,12 +37,13 @@ sum_vessel_ids(c("id1;id2", "id1", "id2", "id1;id3"), c(2, 1, 1, 2))
 
 sum_distinct_vessels(c("id1;id2", "id1", "id2", "id1;id3", ""), c(2, 1, 1, 2, 3))
 sum_distinct_vessels(c("id1;id2", "id1", "id2", "id1;id3"), c(2, 1, 1, 2))
+
 \dontrun{
 require(dplyr)
 
 data(vms)
 vms <-
-  vms_all \%>\%
+  vms \%>\%
   group_by(year, cSquare) \%>\%
   summarise(
     fishingHours = sum(fishingHours, na.rm = TRUE),

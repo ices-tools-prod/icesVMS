@@ -11,9 +11,12 @@
 get_fo_effort <- function(ecoregion) {
   url <-
     httr::parse_url(
-      paste0("https://taf.ices.dk/vms/api/fisheriesoverviews/effort/",
-             utils::URLencode(ecoregion)))
-
+      paste0(
+        "https://taf.ices.dk/vms/api/fisheriesoverviews/effort/",
+        utils::URLencode(ecoregion)
+      )
+    )
+  url <- httr::build_url(url)
   out <- vms_get(url)
 
   httr::content(out, simplifyVector = TRUE)
