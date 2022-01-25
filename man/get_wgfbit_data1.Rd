@@ -8,7 +8,8 @@ get_wgfbit_data1(
   ecoregion,
   year,
   fishing_category = NULL,
-  benthis_metier = NULL
+  benthis_metier = NULL,
+  datacall = NULL
 )
 }
 \arguments{
@@ -19,6 +20,9 @@ get_wgfbit_data1(
 \item{fishing_category}{optional gear category ("Otter", "Dredge")}
 
 \item{benthis_metier}{optional benthis metier ("SDN_DMF")}
+
+\item{datacall}{integer year giving which data call year to enquire about.
+If NULL returns the a summary of the most recent approved data.}
 }
 \value{
 a data.frame with a WKT column for the c-square polygons
