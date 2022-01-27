@@ -3,7 +3,6 @@
 #' Download a data.frame of surface and subsurface swept area
 #' ratio by c-square for a given ICES ecoregion, month, year and gear code.
 #'
-#' @param ecoregion ICES ecoregion
 #' @param year which year to select
 #' @param fishing_category optional gear category ("Otter", "Dredge")
 #' @param benthis_metier optional benthis metier ("SDN_DMF")
@@ -18,11 +17,11 @@
 #' are supplied the total is calculated.
 #'
 #' @export
-get_wgfbit_data3 <- function(ecoregion, year, fishing_category = NULL, benthis_metier = NULL, datacall = NULL) {
+get_wgfbit_data3 <- function(year, fishing_category = NULL, benthis_metier = NULL, datacall = NULL) {
   url <-
     httr::parse_url(
-      paste0("https://taf.ices.dk/vms/api/wgfbit/dataset3/",
-             utils::URLencode(ecoregion), "/", year))
+      paste0("https://taf.ices.dk/vms/api/wgfbit/dataset3/", year)
+    )
 
   args <- list()
   if (!is.null(fishing_category)) {
