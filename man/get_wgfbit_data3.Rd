@@ -5,7 +5,6 @@
 \title{Download swept area ratio, landings and value map data}
 \usage{
 get_wgfbit_data3(
-  ecoregion,
   year,
   fishing_category = NULL,
   benthis_metier = NULL,
@@ -13,8 +12,6 @@ get_wgfbit_data3(
 )
 }
 \arguments{
-\item{ecoregion}{ICES ecoregion}
-
 \item{year}{which year to select}
 
 \item{fishing_category}{optional gear category ("Otter", "Dredge")}
