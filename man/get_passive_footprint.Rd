@@ -4,7 +4,7 @@
 \alias{get_passive_footprint}
 \title{Download passive fishing gear footprint}
 \usage{
-get_passive_footprint(ecoregion, year, metier_level4 = NULL)
+get_passive_footprint(ecoregion, year, metier_level4 = NULL, datacall = NULL)
 }
 \arguments{
 \item{ecoregion}{ICES ecoregion, if NULL no spatial filtering is performed.}
@@ -12,6 +12,9 @@ get_passive_footprint(ecoregion, year, metier_level4 = NULL)
 \item{year}{which year to select}
 
 \item{metier_level4}{optional gear code (metier level 4) ("FPO")}
+
+\item{datacall}{integer year giving which data call year to enquire about.
+If NULL returns the a summary of the most recent approved data.}
 }
 \value{
 a data.frame with a WKT column for the c-square polygons
