@@ -3,7 +3,7 @@
 #' Download a data.frame of presence of fishing by c-square and year
 #' for passive fishing gears (see details).
 #'
-#' @param ecoregion ICES ecoregion
+#' @param ecoregion ICES ecoregion, if NULL no spatial filtering is performed.
 #' @param year which year to select
 #' @param metier_level4 optional gear code (metier level 4) ("FPO")
 #'

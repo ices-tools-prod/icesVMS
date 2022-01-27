@@ -7,7 +7,7 @@
 get_passive_footprint(ecoregion, year, metier_level4 = NULL)
 }
 \arguments{
-\item{ecoregion}{ICES ecoregion}
+\item{ecoregion}{ICES ecoregion, if NULL no spatial filtering is performed.}
 
 \item{year}{which year to select}
 
