@@ -4,10 +4,12 @@
 \alias{screen_vms_file}
 \title{Download swept area ratio, landings and value map data}
 \usage{
-screen_vms_file(file)
+screen_vms_file(file, verbose = FALSE)
 }
 \arguments{
 \item{file}{file name of the file containing the data to screen}
+
+\item{verbose}{return verbose information about the POST request}
 }
 \value{
 text message from the screening api
