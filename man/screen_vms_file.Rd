@@ -4,10 +4,13 @@
 \alias{screen_vms_file}
 \title{Download swept area ratio, landings and value map data}
 \usage{
-screen_vms_file(file, verbose = FALSE)
+screen_vms_file(file, sendEmail = TRUE, verbose = FALSE)
 }
 \arguments{
 \item{file}{file name of the file containing the data to screen}
+
+\item{sendEmail}{TRUE or FALSE, should you recieve and email about
+the submission}
 
 \item{verbose}{return verbose information about the POST request}
 }

@@ -8,12 +8,14 @@
 #'
 #' @param file file name of the file containing the data to screen
 #' @param verbose return verbose information about the POST request
+#' @param sendEmail TRUE or FALSE, should you recieve and email about
+#'   the submission
 #'
 #' @return text message from the screening api
 #'
 #'
 #' @export
-screen_vms_file <- function(file, verbose = FALSE) {
+screen_vms_file <- function(file, sendEmail = TRUE, verbose = FALSE) {
   url <-
     httr::parse_url(
       "https://data.ices.dk/vms/webapi/ScreenVMSFile"
@@ -21,7 +23,8 @@ screen_vms_file <- function(file, verbose = FALSE) {
 
   body <-
     list(
-      fileToScreen = httr::upload_file(file)
+      fileToScreen = httr::upload_file(file),
+      sendEMail = sendEmail
     )
 
   resp <- vms_post(url, body, verbose = verbose)
