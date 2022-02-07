@@ -6,7 +6,6 @@
 #' @param sessionId datsu session ID
 #'
 #' @return a list
-#' @export
 get_datsu_session_detail <- function(sessionId) {
   url <- httr::parse_url("https://taf.ices.dk/vms/api/datsuSession/details")
   url$query <- list(sessionId = sessionId)

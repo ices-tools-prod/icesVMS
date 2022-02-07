@@ -5,3 +5,11 @@ vms_get <- function(url, retry = TRUE) {
 
   return(out)
 }
+
+
+#' @importFrom icesConnect ices_post_jwt
+vms_post <- function(url, body = list(), retry = TRUE, verbose = FALSE) {
+  out <- icesConnect::ices_post_jwt(url, body, retry = retry, verbose = verbose)
+
+  return(out)
+}

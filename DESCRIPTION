@@ -1,6 +1,6 @@
 Package: icesVMS
-Version: 1.0.0.9017
-Date: 2022-01-27
+Version: 1.0.0.9018
+Date: 2022-02-07
 Title: Functions to link to the ICES VMS and logbook database webservices
 Authors@R: c(person("Colin", "Millar", role=c("aut","cre"), email="colin.millar@ices.dk"),
              person("Carlos", "Pinto", role="ctb"))
@@ -12,3 +12,6 @@ License: file LICENSE
 URL: https://www.ices.dk/marine-data/tools/Pages/WebServices.aspx
 Encoding: UTF-8
 RoxygenNote: 7.1.2
+Depends:
+    R (>= 2.10)
+LazyData: true

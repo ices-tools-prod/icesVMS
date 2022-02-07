@@ -6,7 +6,6 @@
 #' @param sessionId datsu session ID
 #'
 #' @return a list of data.frames of VMS and logbook data
-#' @export
 get_datsu_session <- function(sessionId) {
 
   ve <- get_datsu_session_ve(sessionId)
