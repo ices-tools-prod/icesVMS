@@ -2,7 +2,7 @@
 % Please edit documentation in R/screen_vms_file.R
 \name{screen_vms_file}
 \alias{screen_vms_file}
-\title{Download swept area ratio, landings and value map data}
+\title{Screen a VMS file and submit for QC checks}
 \usage{
 screen_vms_file(file, sendEmail = TRUE, verbose = FALSE)
 }
@@ -23,4 +23,10 @@ validated by the VMS database. The service can be called using post
 and the file will have to be part of the body of que call. The user
 needs to be autenticated in order to call this service.
 This file can be later pushed to the database by the same user.
+}
+\examples{
+
+filename <- system.file("test_files/vms_test.csv", package = "icesVMS")
+screen_vms_file(filename)
+
 }

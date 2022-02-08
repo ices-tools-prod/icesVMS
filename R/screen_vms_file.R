@@ -1,4 +1,4 @@
-#' Download swept area ratio, landings and value map data
+#' Screen a VMS file and submit for QC checks
 #'
 #' In this webservice the user can upload a file to be screen and
 #' validated by the VMS database. The service can be called using post
@@ -13,6 +13,10 @@
 #'
 #' @return text message from the screening api
 #'
+#' @examples
+#'
+#' filename <- system.file("test_files/vms_test.csv", package = "icesVMS")
+#' screen_vms_file(filename)
 #'
 #' @export
 screen_vms_file <- function(file, sendEmail = TRUE, verbose = FALSE) {
