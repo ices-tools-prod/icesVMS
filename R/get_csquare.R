@@ -28,7 +28,7 @@ get_csquare <- function(c_square, stat_rec, ices_area, ecoregion) {
   url$query <- args
   url <- httr::build_url(url)
 
-  out <- vms_get(url)
+  out <- vms_get(url, use_token = FALSE, content = TRUE)
 
-  httr::content(out, simplifyVector = TRUE)
+  out
 }

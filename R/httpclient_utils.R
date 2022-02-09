@@ -1,19 +1,33 @@
 #' @importFrom icesConnect ices_get_jwt
-vms_get <- function(url, retry = TRUE) {
+vms_get <- function(url, retry = TRUE, quiet = FALSE, verbose = FALSE, content = FALSE, use_token = TRUE) {
 
-  out <- icesConnect::ices_get_jwt(url, retry = retry)
+  resp <-
+    ices_get_jwt(
+      url,
+      retry = retry, quiet = quiet, verbose = verbose,
+      jwt = if (use_token) NULL else ""
+    )
 
-  return(out)
+  if (content) {
+    content(resp, simplifyVector = TRUE)
+  } else {
+    resp
+  }
 }
 
 
 #' @importFrom icesConnect ices_post_jwt
-vms_post <- function(url, body = list(), retry = TRUE, verbose = FALSE) {
-  out <- icesConnect::ices_post_jwt(url, body,
-    encode = "multipart",
-    retry = retry,
-    verbose = verbose
-  )
+vms_post <- function(url, body = list(), retry = TRUE, verbose = FALSE, use_token = TRUE) {
+
+  out <-
+    ices_post_jwt(
+      url,
+      body,
+      encode = "multipart",
+      retry = retry,
+      verbose = verbose,
+      jwt = if (use_token) NULL else ""
+    )
 
   return(out)
 }
