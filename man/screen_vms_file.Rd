@@ -4,13 +4,10 @@
 \alias{screen_vms_file}
 \title{Screen a VMS file and submit for QC checks}
 \usage{
-screen_vms_file(file, sendEmail = TRUE, verbose = FALSE)
+screen_vms_file(file, verbose = FALSE)
 }
 \arguments{
 \item{file}{file name of the file containing the data to screen}
-
-\item{sendEmail}{TRUE or FALSE, should you recieve and email about
-the submission}
 
 \item{verbose}{return verbose information about the POST request}
 }
@@ -26,7 +23,8 @@ This file can be later pushed to the database by the same user.
 }
 \examples{
 
+\dontrun{
 filename <- system.file("test_files/vms_test.csv", package = "icesVMS")
 screen_vms_file(filename)
-
+}
 }
