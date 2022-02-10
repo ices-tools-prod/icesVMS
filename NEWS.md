@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# icesVMS 1.1.0
+
+- Same as previous version.
+
+
 # icesVMS 1.0.0.9022
 
 * add sendEmail argument to screen_vms_file

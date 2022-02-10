@@ -1,5 +1,5 @@
 Package: icesVMS
-Version: 1.0.0.9022
+Version: 1.1.0
 Date: 2022-02-10
 Title: Functions to Link to the ICES VMS and Logbook Database Web Services
 Authors@R: c(person("Colin", "Millar", role=c("aut","cre"), email="colin.millar@ices.dk"),
