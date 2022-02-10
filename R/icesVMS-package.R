@@ -22,7 +22,7 @@
 #' @author Colin Millar.
 #'
 #' @references
-#' ICES web services: \url{https://www.ices.dk/marine-data/tools/Pages/web services.aspx}.
+#' ICES web services: \url{https://www.ices.dk/data/tools/Pages/web services.aspx}.
 #'
 
 NA
