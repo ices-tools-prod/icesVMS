@@ -5,3 +5,4 @@ README.bib
 ^README_files$
 ^data-raw$
 LICENSE
+^cran-comments\.md$
