@@ -1,3 +1,19 @@
+<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+
+# icesVMS 1.0.0.9022
+
+* add sendEmail argument to screen_vms_file
+* add function screen_vms_file(), remove datsu functions from exports
+* add datacall arg to get_passive_footprint
+* allow null for ecoregion in get_passive_footprint
+* add datacall argument to wgfbit functions
+* added get_wgfbit_data3, get_sar, and updated get_sar_map to return an sf object if the package is installed
+* add datsu session functions
+* add datacall year argument to get_vms()
+* add function get_upload_summary()
+* moved http requests to icesConnect package
+
+
 # icesVMS 1.0.0.9013
 
 * bugfix in get_logbook()
