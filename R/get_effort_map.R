@@ -10,7 +10,7 @@
 #'
 #' @details
 #'
-#' The spatial data.frame contains average annual mw fishing hours,
+#' The spatial data.frame contains average annual mega Watt fishing hours,
 #' averaged over 4 years.
 #'
 #' @export

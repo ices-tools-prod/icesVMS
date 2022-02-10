@@ -1,15 +1,15 @@
 #' Screen a VMS file and submit for QC checks
 #'
-#' In this webservice the user can upload a file to be screen and
+#' In this web service the user can upload a file to be screen and
 #' validated by the VMS database. The service can be called using post
-#' and the file will have to be part of the body of que call. The user
-#' needs to be autenticated in order to call this service.
+#' and the file will have to be part of the body of the call. The user
+#' needs to be authenticated in order to call this service.
 #' This file can be later pushed to the database by the same user.
 #'
 #' @param file file name of the file containing the data to screen
 #' @param verbose return verbose information about the POST request
 #'
-#' @return text message from the screening api
+#' @return text message from the screening process
 #'
 #' @examples
 #'

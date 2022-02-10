@@ -4,10 +4,10 @@
 #'
 #' @aliases icesVMS
 #'
-#' @title Functions to link to the ICES VMS and logbook database webservices.
+#' @title Functions to link to the ICES VMS and logbook database web services.
 #'
 #' @description
-#' Functions to link to the ICES VMS and logbook database webservices to allow
+#' Functions to link to the ICES VMS and logbook database web services to allow
 #' users to download summaries and data products from the ICES VMS and logbook database.
 #'
 #' @details
@@ -22,7 +22,7 @@
 #' @author Colin Millar.
 #'
 #' @references
-#' ICES web services: \url{https://www.ices.dk/marine-data/tools/Pages/WebServices.aspx}.
+#' ICES web services: \url{https://www.ices.dk/marine-data/tools/Pages/web services.aspx}.
 #'
 
 NA

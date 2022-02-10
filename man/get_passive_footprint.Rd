@@ -13,7 +13,7 @@ get_passive_footprint(ecoregion, year, metier_level4 = NULL, datacall = NULL)
 
 \item{metier_level4}{optional gear code (metier level 4) ("FPO")}
 
-\item{datacall}{integer year giving which data call year to enquire about.
+\item{datacall}{integer year giving which data call year to inquire about.
 If NULL returns the a summary of the most recent approved data.}
 }
 \value{

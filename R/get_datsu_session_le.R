@@ -1,9 +1,9 @@
-#' Download logbook data from a datsu session
+#' Download logbook data from a DATSU session
 #'
-#' RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
+#' RESTRICTED.  Only core members of the ICES VMS data call can access this data.
 #' Download a data.frame of logbook data from the ICES DATSU data checking facility.
 #'
-#' @param sessionId datsu session ID
+#' @param sessionId DATSU session ID
 #'
 #' @return a data.frame of VMS data
 get_datsu_session_le <- function(sessionId) {

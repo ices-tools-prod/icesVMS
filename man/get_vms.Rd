@@ -36,13 +36,13 @@ get_vms(
 
 \item{ecoregion}{ICES ecoregion}
 
-\item{datacall}{integer year giving which data call year to enquire about.
+\item{datacall}{integer year giving which data call year to inquire about.
 If NULL returns the a summary of the most recent approved data.}
 }
 \value{
 a data.frame of VMS data
 }
 \description{
-RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
+RESTRICTED.  Only core members of the ICES VMS data call can access this data.
 Download a data.frame of VMS data from the ICES VMS and logbook database.
 }

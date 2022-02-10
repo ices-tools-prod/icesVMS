@@ -2,17 +2,17 @@
 % Please edit documentation in R/get_datsu_session_detail.R
 \name{get_datsu_session_detail}
 \alias{get_datsu_session_detail}
-\title{Download details for a datsu session}
+\title{Download details for a DATSU session}
 \usage{
 get_datsu_session_detail(sessionId)
 }
 \arguments{
-\item{sessionId}{datsu session ID}
+\item{sessionId}{DATSU session ID}
 }
 \value{
 a list
 }
 \description{
-RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
-Download a list of information on a datsu submission.
+RESTRICTED.  Only core members of the ICES VMS data call can access this data.
+Download a list of information on a DATSU submission.
 }

@@ -1,5 +1,5 @@
 ---
-output: 
+output:
   github_document:
     html_preview: false
 bibliography: README.bib
@@ -22,9 +22,9 @@ icesVMS
 
 icesVMS Functions to support the creation of ICES Fisheries Overviews, ....
 
-icesVMS is implemented as an [R](https://www.r-project.org) package 
+icesVMS is implemented as an [R](https://www.r-project.org) package
 <!-- and available on [CRAN](https://cran.r-project.org/package=icesVMS). -->
-and available on GitHub 
+and available on GitHub
 
 Installation
 ------------
@@ -52,7 +52,7 @@ Examples
 
 ## Download c square information
 
-All of the VMS data submitted to ICES is at the c square level (concise spatial query and representation system, [@reese03_csquares]), and to aid in the exploration of display of data summaries extracted from the ICES VMS/Logbook database there is a service to extract information related to a C square. For example, the following code returns a table of all the c squares in the Celtic Seas ecoregion (see https://ices.dk/community/advisory-process/Pages/ICES-ecosystems-and-advisory-areas.aspx): 
+All of the VMS data submitted to ICES is at the c square level (concise spatial query and representation system, [@reese03_csquares]), and to aid in the exploration of display of data summaries extracted from the ICES VMS/Logbook database there is a service to extract information related to a C square. For example, the following code returns a table of all the c squares in the Celtic Seas ecoregion (see https://ices.dk/community/advisory-process/Pages/ICES-ecosystems-and-advisory-areas.aspx):
 
 ```{r get_csquares, eval = 3, message = FALSE}
 celtic <- get_csquare(ecoregion = "Celtic Seas")
@@ -80,7 +80,7 @@ benthis <- get_benthis_parameters()
 kable(benthis)
 ```
 
-These high level gear categories refered to as `BenthisMet` are connected to lower level metiers via a lookup table maintianed by the WGSFD and avaialbe via:
+These high level gear categories referred to as `BenthisMet` are connected to lower level metiers via a lookup table maintained by the WGSFD and available via:
 
 ```{r metier_lookup, echo = 1, results = 'asis', message = FALSE}
 metiers <- get_metier_lookup()

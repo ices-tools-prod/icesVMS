@@ -1,6 +1,6 @@
 #' Add together anonymous ID entries
 #'
-#' Annonymous vessel IDs are suplied when there are less than 2 vessels. Therefre when adding
+#' Anonymous vessel IDs are supplied when there are less than 2 vessels. Therefore when adding
 #' these values, if there is one or more values containing an empty string (? 2 vessels)
 #' then the results is an empty string also. Otherwise, a unique vector of vessel IDs is
 #' computed and if there are 2 or less unique entries they are returned, otherwise an empty string
@@ -8,11 +8,11 @@
 #'
 #' @note
 #' the format of the vessel IDs is a semi-colon separated list of IDs contained in a character
-#' vector of lenght one.
+#' vector of length one.
 #'
 #' @param id a vector vessel Ids entries: string vector of semi-colon separated IDs
 #' @param n a vector corresponding to the number of unique vessel ids in the vector
-#'          suplied in \code{id} where 3 codes for anything greater than 2.
+#'          supplied in \code{id} where 3 codes for anything greater than 2.
 #'
 #' @return a single character
 #'

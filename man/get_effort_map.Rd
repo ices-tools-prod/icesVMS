@@ -19,6 +19,6 @@ Download a data.frame of kw fishing hours by c-square and gear
 category averaged over 4 years.
 }
 \details{
-The spatial data.frame contains average annual mw fishing hours,
+The spatial data.frame contains average annual mega Watt fishing hours,
 averaged over 4 years.
 }

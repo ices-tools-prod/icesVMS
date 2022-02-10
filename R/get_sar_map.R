@@ -11,8 +11,8 @@
 #'
 #' @details
 #'
-#' The spatial data.frame contains average annual surface-sar
-#' and subsurface-sar averaged over 4 years by default.  If year
+#' The spatial data.frame contains average annual surface-swept-area-ratio
+#' and subsurface-swept-area-ratio averaged over 4 years by default.  If year
 #' is not specified (NULL) then the present year - 1 is assumed.
 #'
 #' @export

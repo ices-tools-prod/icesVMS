@@ -19,6 +19,6 @@ get_csquare(c_square, stat_rec, ices_area, ecoregion)
 a data.frame of VMS data
 }
 \description{
-RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
+RESTRICTED.  Only core members of the ICES VMS data call can access this data.
 Download a data.frame of VMS data from the ICES VMS and logbook database.
 }

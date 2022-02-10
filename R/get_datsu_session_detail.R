@@ -1,9 +1,9 @@
-#' Download details for a datsu session
+#' Download details for a DATSU session
 #'
-#' RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
-#' Download a list of information on a datsu submission.
+#' RESTRICTED.  Only core members of the ICES VMS data call can access this data.
+#' Download a list of information on a DATSU submission.
 #'
-#' @param sessionId datsu session ID
+#' @param sessionId DATSU session ID
 #'
 #' @return a list
 get_datsu_session_detail <- function(sessionId) {

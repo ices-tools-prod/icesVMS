@@ -2,17 +2,17 @@
 % Please edit documentation in R/get_datsu_session.R
 \name{get_datsu_session}
 \alias{get_datsu_session}
-\title{Download VMS and logbook data from a datsu session}
+\title{Download VMS and logbook data from a DATSU session}
 \usage{
 get_datsu_session(sessionId)
 }
 \arguments{
-\item{sessionId}{datsu session ID}
+\item{sessionId}{DATSU session ID}
 }
 \value{
 a list of data.frames of VMS and logbook data
 }
 \description{
-RESTRICED.  Only core members of the ICES VMS datacall can acess this data.
+RESTRICTED.  Only core members of the ICES VMS data call can access this data.
 Download a list of data.frames of VMS and logbook data from the ICES DATSU data checking facility.
 }

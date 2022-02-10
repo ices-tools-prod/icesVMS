@@ -21,7 +21,7 @@ get_wgfbit_data1(
 
 \item{benthis_metier}{optional benthis metier ("SDN_DMF")}
 
-\item{datacall}{integer year giving which data call year to enquire about.
+\item{datacall}{integer year giving which data call year to inquire about.
 If NULL returns the a summary of the most recent approved data.}
 }
 \value{

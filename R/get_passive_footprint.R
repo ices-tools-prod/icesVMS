@@ -6,7 +6,7 @@
 #' @param ecoregion ICES ecoregion, if NULL no spatial filtering is performed.
 #' @param year which year to select
 #' @param metier_level4 optional gear code (metier level 4) ("FPO")
-#' @param datacall integer year giving which data call year to enquire about.
+#' @param datacall integer year giving which data call year to inquire about.
 #'   If NULL returns the a summary of the most recent approved data.
 #'
 #' @return a data.frame with a WKT column for the c-square polygons

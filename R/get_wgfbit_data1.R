@@ -7,7 +7,7 @@
 #' @param year which year to select
 #' @param fishing_category optional gear category ("Otter", "Dredge")
 #' @param benthis_metier optional benthis metier ("SDN_DMF")
-#' @param datacall integer year giving which data call year to enquire about.
+#' @param datacall integer year giving which data call year to inquire about.
 #'   If NULL returns the a summary of the most recent approved data.
 #'
 #' @return a data.frame with a WKT column for the c-square polygons
