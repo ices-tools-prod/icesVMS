@@ -5,7 +5,7 @@
 #'
 #' @param sessionId DATSU session ID
 #'
-#' @return a data.frame of VMS data
+#' @return a data.frame of logbook data
 get_datsu_session_le <- function(sessionId) {
   url <- httr::parse_url("https://taf.ices.dk/vms/api/datsuSession/le")
   url$query <- list(sessionId = sessionId)

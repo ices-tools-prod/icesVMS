@@ -7,7 +7,7 @@
 get_benthis_parameters()
 }
 \value{
-a data.frame
+a data.frame of model parameters
 }
 \description{
 Download a data.frame of gear contact models for

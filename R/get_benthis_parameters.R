@@ -4,7 +4,8 @@
 #' benthis gear categories used in calculating
 #' swept area
 #'
-#' @return a data.frame
+#' @return a data.frame of model parameters
+#'
 #' @export
 get_benthis_parameters <- function() {
   out <- vms_get("https://taf.ices.dk/vms/api/gearwidths")

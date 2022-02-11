@@ -10,7 +10,7 @@ get_datsu_session_le(sessionId)
 \item{sessionId}{DATSU session ID}
 }
 \value{
-a data.frame of VMS data
+a data.frame of logbook data
 }
 \description{
 RESTRICTED.  Only core members of the ICES VMS data call can access this data.
