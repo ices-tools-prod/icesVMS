@@ -2,9 +2,9 @@
 % Please edit documentation in R/get_csquare.R
 \name{get_csquare}
 \alias{get_csquare}
-\title{Download VMS data}
+\title{Download C-square information}
 \usage{
-get_csquare(c_square, stat_rec, ices_area, ecoregion)
+get_csquare(c_square, stat_rec, ices_area, ecoregion, convert2sf = TRUE)
 }
 \arguments{
 \item{c_square}{character 0.05 degree c-square name}
@@ -14,11 +14,27 @@ get_csquare(c_square, stat_rec, ices_area, ecoregion)
 \item{ices_area}{ICES area}
 
 \item{ecoregion}{ICES ecoregion}
+
+\item{convert2sf}{logical, default TRUE, should an simple features object
+be returned if the \code{sf} pakcage is installed?}
 }
 \value{
 a data.frame of VMS data
 }
 \description{
-RESTRICTED.  Only core members of the ICES VMS data call can access this data.
-Download a data.frame of VMS data from the ICES VMS and logbook database.
+Download a data.frame of informatation on a set of C-squares.
+}
+\details{
+If the \code{sf} package is installed then a simple features object
+will be returned, unless the convert2sf flag is set to FALSE.
+}
+\examples{
+\donttest{
+sq40F3 <- get_csquare(stat_rec = "40F3")
+
+# if the sf package is installed, an simple feature object will be returned
+ NS <- get_csquare(ecoregion = "Greater North Sea")
+ if (has_sf())
+  plot(NS["ices_area"], border = "transparent")
+}
 }
