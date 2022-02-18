@@ -24,17 +24,15 @@ icesVMS Functions to support the creation of ICES Fisheries Overviews, ....
 
 icesVMS is implemented as an [R](https://www.r-project.org) package
 <!-- and available on [CRAN](https://cran.r-project.org/package=icesVMS). -->
-and available on GitHub
+and available on GitHub and our [CRAN-like repository](https://ices-tools-prod.r-universe.dev/ui#builds)
 
 Installation
 ------------
 
-icesVMS can be installed from GitHub using the `install_github` command from the
-`remotes` package:
+icesVMS can be installed from our CRAN-like repository using the standard `install.packages()` command
 
 ```R
-library(remotes)
-install_github("ices-tools-prod/icesVMS")
+install.packages("icesVMS", repos = 'https://ices-tools-prod.r-universe.dev')
 ```
 
 Usage
