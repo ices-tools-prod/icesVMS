@@ -38,7 +38,5 @@ get_vms <- function(country, year, month, c_square,
   url$query <- args
   url <- httr::build_url(url)
 
-  out <- vms_get(url, use_token = TRUE)
-
-  httr::content(out, simplifyVector = TRUE)
+  vms_get(url, use_token = TRUE)
 }
