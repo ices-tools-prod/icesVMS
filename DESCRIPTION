@@ -1,10 +1,11 @@
 Package: icesVMS
-Version: 1.1.0
-Date: 2022-02-10
+Version: 1.1.1
+Date: 2022-07-13
 Title: Functions to Link to the ICES VMS and Logbook Database Web Services
 Authors@R: c(person("Colin", "Millar", role=c("aut","cre"), email="colin.millar@ices.dk"),
              person("Carlos", "Pinto", role="ctb"))
-Imports: httr,
+Imports: glue,
+          httr,
           icesConnect (>= 1.0.0)
 Suggests: sf
 Description: Functions to link to the ICES VMS and logbook database web services to allow
@@ -12,7 +13,7 @@ Description: Functions to link to the ICES VMS and logbook database web services
 License: GPL (>= 2)
 URL: https://www.ices.dk/data/tools/Pages/WebServices.aspx
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 Depends:
     R (>= 2.10)
 LazyData: true

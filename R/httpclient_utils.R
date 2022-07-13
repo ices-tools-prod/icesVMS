@@ -1,5 +1,5 @@
 #' @importFrom icesConnect ices_get_jwt
-vms_get <- function(url, retry = TRUE, quiet = FALSE, verbose = FALSE, content = FALSE, use_token = TRUE) {
+vms_get <- function(url, retry = TRUE, quiet = FALSE, verbose = FALSE, content = TRUE, use_token = FALSE) {
 
   resp <-
     ices_get_jwt(
@@ -17,7 +17,7 @@ vms_get <- function(url, retry = TRUE, quiet = FALSE, verbose = FALSE, content =
 
 
 #' @importFrom icesConnect ices_post_jwt
-vms_post <- function(url, body = list(), retry = TRUE, verbose = FALSE, use_token = TRUE) {
+vms_post <- function(url, body = list(), retry = TRUE, verbose = FALSE, use_token = FALSE) {
 
   out <-
     ices_post_jwt(
@@ -30,4 +30,9 @@ vms_post <- function(url, body = list(), retry = TRUE, verbose = FALSE, use_toke
     )
 
   return(out)
+}
+
+api_url <- function() {
+  # make an option?
+  "https://taf.ices.dk/vms/api"
 }

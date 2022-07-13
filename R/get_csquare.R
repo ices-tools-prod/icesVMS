@@ -6,7 +6,7 @@
 #' @param stat_rec ICES statistical rectangle
 #' @param ices_area ICES area
 #' @param ecoregion ICES ecoregion
-#' @param convert2sf logical, default TRUE, should an simple features object
+#' @param convert2sf logical, default FALSE, should an simple features object
 #'   be returned if the \code{sf} pakcage is installed?
 #'
 #' @return a data.frame of VMS data
@@ -14,20 +14,19 @@
 #' @details
 #'
 #' If the \code{sf} package is installed then a simple features object
-#' will be returned, unless the convert2sf flag is set to FALSE.
+#' will be returned, if convert2sf flag is set to TRUE.
 #'
 #' @examples
 #' \donttest{
 #' sq40F3 <- get_csquare(stat_rec = "40F3")
 #'
 #' # if the sf package is installed, an simple feature object will be returned
-#'  NS <- get_csquare(ecoregion = "Greater North Sea")
+#'  NS <- get_csquare(ecoregion = "Greater North Sea", convert2sf = TRUE)
 #'  if (has_sf())
 #'   plot(NS["ices_area"], border = "transparent")
 #' }
 #' @export
-get_csquare <- function(c_square, stat_rec, ices_area, ecoregion, convert2sf = TRUE) {
-  url <- httr::parse_url("https://taf.ices.dk/vms/api/csquares")
+get_csquare <- function(c_square, stat_rec, ices_area, ecoregion, convert2sf = FALSE) {
 
   args <- lapply(as.list(match.call())[-1], eval, parent.frame())
   if (any(sapply(args, length) > 1)) {
@@ -41,10 +40,13 @@ get_csquare <- function(c_square, stat_rec, ices_area, ecoregion, convert2sf = T
     return(do.call(rbind, out))
   }
 
-  url$query <- args
-  url <- httr::build_url(url)
+  url <- do.call(vms_api, c(list(service = "csquares"), args))
 
-  out <- vms_get(url, use_token = FALSE, content = TRUE)
+  out <- vms_get(url)
 
-  convert_df2sf(out)
+  if (convert2sf) {
+    convert_df2sf(out)
+  } else {
+    out
+  }
 }

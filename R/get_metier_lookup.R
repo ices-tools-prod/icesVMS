@@ -7,7 +7,5 @@
 #' @export
 #' @importFrom httr content
 get_metier_lookup <- function() {
-  vms <- vms_get("https://taf.ices.dk/vms/api/MetierLookup")
-
-  httr::content(vms, simplifyVector = TRUE)
+  vms_get("https://taf.ices.dk/vms/api/MetierLookup")
 }

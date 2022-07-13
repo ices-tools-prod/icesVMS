@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_benthis_parameters.R
 \name{get_benthis_parameters}
 \alias{get_benthis_parameters}
-\title{Get gear characteristics for Benthis gear categories}
+\title{Get gear characteristics for 'benthis' gear categories}
 \usage{
 get_benthis_parameters()
 }
@@ -11,6 +11,6 @@ a data.frame of model parameters
 }
 \description{
 Download a data.frame of gear contact models for
-benthis gear categories used in calculating
-swept area
+'benthis' gear categories used in calculating
+the swept area of a fishing gear.
 }
