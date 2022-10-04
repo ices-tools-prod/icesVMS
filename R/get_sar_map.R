@@ -30,11 +30,9 @@ get_sar_map <- function(ecoregion, year = NULL, nyears = NULL) {
 
   out <- vms_get(url, use_token = TRUE)
 
-  map <- httr::content(out, simplifyVector = TRUE)
-
-  if (requireNamespace('sf', quietly = TRUE) && length(map)) {
-    map <- sf::st_as_sf(map, wkt = "wkt", crs = 4326)
+  if (requireNamespace('sf', quietly = TRUE) && length(out)) {
+    out <- sf::st_as_sf(out, wkt = "wkt", crs = 4326)
   }
 
-  map
+  out
 }
