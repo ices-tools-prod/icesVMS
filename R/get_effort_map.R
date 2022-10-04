@@ -25,5 +25,5 @@ get_effort_map <- function(ecoregion, year = NULL) {
 
   url <- httr::build_url(url)
 
-  vms_get(url)
+  vms_get(url, use_token = TRUE)
 }
