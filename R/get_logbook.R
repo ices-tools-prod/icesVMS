@@ -34,7 +34,5 @@ get_logbook <- function(country, year, month,
   url$query <- args
   url <- httr::build_url(url)
 
-  out <- vms_get(url)
-
-  httr::content(out, simplifyVector = TRUE)
+  vms_get(url, use_token = TRUE)
 }

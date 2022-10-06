@@ -18,7 +18,5 @@ get_wgfbit_data2 <- function(ecoregion, year) {
 
   url <- httr::build_url(url)
 
-  out <- vms_get(url)
-
-  httr::content(out, simplifyVector = TRUE)
+  vms_get(url, use_token = TRUE)
 }

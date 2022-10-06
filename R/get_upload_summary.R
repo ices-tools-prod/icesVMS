@@ -15,7 +15,5 @@ get_upload_summary <- function(datacall = NULL) {
     url <- httr::parse_url(sprintf("https://taf.ices.dk/vms/api/vmssummary/%i", datacall))
   }
 
-  out <- vms_get(url)
-
-  httr::content(out, simplifyVector = TRUE)
+  vms_get(url, use_token = TRUE)
 }

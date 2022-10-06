@@ -17,7 +17,6 @@ get_fo_landings <- function(ecoregion) {
       )
     )
   url <- httr::build_url(url)
-  out <- vms_get(url)
-
-  httr::content(out, simplifyVector = TRUE)
+  
+  vms_get(url)
 }

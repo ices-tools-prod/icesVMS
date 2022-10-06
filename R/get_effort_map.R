@@ -25,5 +25,11 @@ get_effort_map <- function(ecoregion, year = NULL) {
 
   url <- httr::build_url(url)
 
-  vms_get(url, use_token = TRUE)
+  out <- vms_get(url, use_token = TRUE)
+  
+  if (requireNamespace("sf", quietly = TRUE) && length(out)) {
+    out <- sf::st_as_sf(out, wkt = "wkt", crs = 4326)
+  }
+  
+  out
 }

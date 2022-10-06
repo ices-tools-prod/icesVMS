@@ -43,7 +43,5 @@ get_wgfbit_data3 <- function(year, fishing_category = NULL, benthis_metier = NUL
 
   url <- httr::build_url(url)
 
-  out <- vms_get(url)
-
-  httr::content(out, simplifyVector = TRUE)
+  vms_get(url, use_token = TRUE)
 }

@@ -1,5 +1,5 @@
 Package: icesVMS
-Version: 1.1.2
+Version: 1.1.3
 Title: Functions to Link to the ICES VMS and Logbook Database Web Services
 Authors@R: c(person("Colin", "Millar", role=c("aut","cre"), email="colin.millar@ices.dk"),
              person("Carlos", "Pinto", role="ctb"))

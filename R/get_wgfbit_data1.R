@@ -44,7 +44,5 @@ get_wgfbit_data1 <- function(ecoregion, year, fishing_category = NULL, benthis_m
 
   url <- httr::build_url(url)
 
-  out <- vms_get(url)
-
-  httr::content(out, simplifyVector = TRUE)
+  vms_get(url, use_token = TRUE)
 }
