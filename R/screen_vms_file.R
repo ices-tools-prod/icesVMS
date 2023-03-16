@@ -26,7 +26,7 @@ screen_vms_file <- function(file, verbose = FALSE) {
       fileToScreen = httr::upload_file(file)
     )
 
-  resp <- vms_post(url, body, verbose = verbose)
+  resp <- vms_post(url, body, verbose = verbose, use_token = TRUE)
 
   httr::content(resp)
 }
