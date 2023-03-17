@@ -1,13 +1,13 @@
 #' Download C-square information
 #'
-#' Download a data.frame of informatation on a set of C-squares.
+#' Download a data.frame of information on a set of C-squares.
 #'
 #' @param c_square character 0.05 degree c-square name
 #' @param stat_rec ICES statistical rectangle
 #' @param ices_area ICES area
 #' @param ecoregion ICES ecoregion
 #' @param convert2sf logical, default FALSE, should an simple features object
-#'   be returned if the \code{sf} pakcage is installed?
+#'   be returned if the \code{sf} package is installed?
 #'
 #' @return a data.frame of VMS data
 #'

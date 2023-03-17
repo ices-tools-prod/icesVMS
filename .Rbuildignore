@@ -6,3 +6,4 @@ README.bib
 ^data-raw$
 LICENSE
 ^cran-comments\.md$
+^CRAN-SUBMISSION$
