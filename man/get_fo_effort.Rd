@@ -16,3 +16,10 @@ a data.frame
 Download a data.frame of kw fishing hours by country and year for a
 given ICES ecoregion.
 }
+\examples{
+\dontrun{
+# requires authorization
+ns_effort_data <- get_fo_effort("Greater North Sea")
+}
+
+}

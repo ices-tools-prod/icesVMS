@@ -4,12 +4,15 @@
 \alias{get_effort_map}
 \title{Download fishing effort map data}
 \usage{
-get_effort_map(ecoregion, year = NULL)
+get_effort_map(ecoregion, year = NULL, convert2sf = FALSE)
 }
 \arguments{
-\item{ecoregion}{ICES ecoregion}
+\item{ecoregion}{ICES ecoregion (see details)}
 
 \item{year}{which year to select (see details)}
+
+\item{convert2sf}{logical, default FALSE, should an simple features object
+be returned if the \code{sf} package is installed?}
 }
 \value{
 a data.frame with a WKT column for the c-square polygons
@@ -21,4 +24,18 @@ category averaged over 4 years.
 \details{
 The spatial data.frame contains average annual mega Watt fishing hours,
 averaged over 4 years.
+
+Available ecoregions are given in the description feild of the ICES
+ecoregion vocabulary <http://vocab.ices.dk/?ref=1414>
+}
+\examples{
+\dontrun{
+# requires authorization
+ns_effort_map <- get_effort_map("Greater North Sea", convert2sf = TRUE)
+plot(
+  ns_effort_map[ns_effort_map$fishing_category_FO == "Otter","mw_fishinghours"], 
+  border = FALSE, logz = TRUE
+)
+}
+
 }

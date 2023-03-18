@@ -13,3 +13,9 @@ a data.frame
 Download a data.frame of Metier codes to link
 level 6 metier codes with different gear categories
 }
+\examples{
+\donttest{
+metier_lookup <- get_metier_lookup()
+}
+
+}

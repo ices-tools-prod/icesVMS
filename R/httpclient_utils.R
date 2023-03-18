@@ -1,4 +1,5 @@
 #' @importFrom icesConnect ices_get_jwt
+#' @importFrom httr content
 vms_get <- function(url, retry = TRUE, quiet = FALSE, verbose = FALSE, content = TRUE, use_token = FALSE) {
 
   resp <-

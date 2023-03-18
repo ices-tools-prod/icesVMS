@@ -6,12 +6,14 @@
 #'
 #' @return a data.frame of model parameters
 #'
+#' @examples
+#' \donttest{
+#' benthis_pars <- get_benthis_parameters()
+#' }
+#' 
 #' @export
 get_benthis_parameters <- function() {
-  out <-
-    vms_get(
-      vms_api("gearwidths")
-    )
-
-  out
+  vms_get(
+    vms_api("gearwidths")
+  )
 }

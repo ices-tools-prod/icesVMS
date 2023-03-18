@@ -4,8 +4,15 @@
 #' level 6 metier codes with different gear categories
 #'
 #' @return a data.frame
+#' 
+#' @examples
+#' \donttest{
+#' metier_lookup <- get_metier_lookup()
+#' }
+#'
 #' @export
-#' @importFrom httr content
 get_metier_lookup <- function() {
-  vms_get("https://taf.ices.dk/vms/api/MetierLookup")
+  vms_get(
+    vms_api("MetierLookup")
+  )
 }

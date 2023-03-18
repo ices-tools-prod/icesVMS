@@ -13,12 +13,22 @@
 #' @param ecoregion ICES ecoregion
 #'
 #' @return a data.frame of VMS data
+#'
+#' @examples
+#' \dontrun{
+#' # requires authorization
+#' logbook <- get_logbook(country = "DK", year = 2021, month = 1)
+#' }
+#' 
 #' @export
 get_logbook <- function(country, year, month,
                     gear_code, metier,
                     stat_rec, ices_area, ecoregion) {
-  url <- httr::parse_url("https://taf.ices.dk/vms/api/logbook")
 
+  if (!missing(ecoregion)) {
+    check_ecoregion(ecoregion)
+  }
+  
   args <- lapply(as.list(match.call())[-1], eval, parent.frame())
   if (any(sapply(args, length) > 1)) {
     args_grid <- do.call(expand.grid, c(args, KEEP.OUT.ATTRS = FALSE, stringsAsFactors = FALSE))
@@ -31,8 +41,7 @@ get_logbook <- function(country, year, month,
     return(do.call(rbind, out))
   }
 
-  url$query <- args
-  url <- httr::build_url(url)
+  url <- do.call(vms_api, c("logbook", args))
 
   vms_get(url, use_token = TRUE)
 }

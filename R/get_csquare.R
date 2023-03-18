@@ -22,11 +22,14 @@
 #'
 #' # if the sf package is installed, an simple feature object will be returned
 #'  NS <- get_csquare(ecoregion = "Greater North Sea", convert2sf = TRUE)
-#'  if (has_sf())
-#'   plot(NS["ices_area"], border = "transparent")
+#'  plot(NS["ices_area"], border = "transparent")
 #' }
 #' @export
 get_csquare <- function(c_square, stat_rec, ices_area, ecoregion, convert2sf = FALSE) {
+
+  if (!missing(ecoregion)) {
+    check_ecoregion(ecoregion)
+  }
 
   args <- lapply(as.list(match.call())[-1], eval, parent.frame())
   if (any(sapply(args, length) > 1)) {

@@ -16,3 +16,9 @@ a data.frame of VMS summary data
 \description{
 Download a summary of submitted data
 }
+\examples{
+\donttest{
+upload_summary <- get_upload_summary()
+}
+
+}

@@ -6,13 +6,19 @@
 #'   If NULL returns the a summary of the most recent approved data.
 #'
 #' @return a data.frame of VMS summary data
+#' 
+#' @examples
+#' \donttest{
+#' upload_summary <- get_upload_summary()
+#' }
+#' 
 #' @export
 get_upload_summary <- function(datacall = NULL) {
-
-  url <- httr::parse_url("https://taf.ices.dk/vms/api/vmssummary")
-
+  url <-
   if (!is.null(datacall)) {
-    url <- httr::parse_url(sprintf("https://taf.ices.dk/vms/api/vmssummary/%i", datacall))
+    vms_api(glue("vmssummary/{datacall}"))
+  } else {
+    vms_api("vmssummary")
   }
 
   vms_get(url, use_token = TRUE)

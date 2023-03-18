@@ -5,7 +5,6 @@
 \title{Download VMS data}
 \usage{
 get_sar(
-  country,
   year,
   c_square,
   gear_code,
@@ -16,8 +15,6 @@ get_sar(
 )
 }
 \arguments{
-\item{country}{country code}
-
 \item{year}{integer year}
 
 \item{c_square}{character 0.05 degree c-square name}
@@ -39,4 +36,11 @@ a data.frame of VMS data
 \description{
 RESTRICTED.  Only core members of the ICES VMS data call can access this data.
 Download a data.frame of VMS swept area ratio values from the ICES VMS and logbook database.
+}
+\examples{
+\dontrun{
+# requires authorization
+sar <- get_sar(2021, stat_rec = "40F1")
+}
+
 }

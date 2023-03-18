@@ -16,13 +16,22 @@
 #'   If NULL returns the a summary of the most recent approved data.
 #'
 #' @return a data.frame of VMS data
+#'
+#' @examples
+#' \dontrun{
+#' # requires authorization
+#' vms <- get_vms(country = "DK", year = 2021, month = 1)
+#' }
+#' 
 #' @export
 get_vms <- function(country, year, month, c_square,
                     gear_code, metier,
                     stat_rec, ices_area, ecoregion, datacall = NULL) {
 
-  url <- httr::parse_url("https://taf.ices.dk/vms/api/vms")
-
+  if (!missing(ecoregion)) {
+    check_ecoregion(ecoregion)
+  }
+  
   args <- lapply(as.list(match.call())[-1], eval, parent.frame())
   if (any(sapply(args, length) > 1)) {
     args_grid <- do.call(expand.grid, c(args, KEEP.OUT.ATTRS = FALSE, stringsAsFactors = FALSE))
@@ -35,8 +44,7 @@ get_vms <- function(country, year, month, c_square,
     return (do.call(rbind, out))
   }
 
-  url$query <- args
-  url <- httr::build_url(url)
+  url <- do.call(vms_api, c("vms", args))
 
   vms_get(url, use_token = TRUE)
 }

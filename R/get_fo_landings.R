@@ -7,16 +7,20 @@
 #'
 #' @return a data.frame
 #'
+#' @examples
+#' \dontrun{
+#' # requires authorization
+#' ns_landings_data <- get_fo_landings("Greater North Sea")
+#' }
+#' 
 #' @export
 get_fo_landings <- function(ecoregion) {
+  check_ecoregion(ecoregion)
+
   url <-
-    httr::parse_url(
-      paste0(
-        "https://taf.ices.dk/vms/api/fisheriesoverviews/landings/",
-        utils::URLencode(ecoregion)
-      )
+    vms_api(
+      glue("fisheriesoverviews/landings/{URLencode(ecoregion)}")
     )
-  url <- httr::build_url(url)
-  
-  vms_get(url)
+
+  vms_get(url, use_token = TRUE)
 }

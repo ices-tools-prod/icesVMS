@@ -16,3 +16,10 @@ a data.frame
 Download a data.frame of total weight by country and year for a
 given ICES ecoregion.
 }
+\examples{
+\dontrun{
+# requires authorization
+ns_landings_data <- get_fo_landings("Greater North Sea")
+}
+
+}

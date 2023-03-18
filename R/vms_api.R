@@ -3,14 +3,14 @@
 #' utility to build a url with optional query arguments
 #'
 #' @param service the name of the service
-#' @param ... name arguments will be added as queries
+#' @param ... named arguments will be added as queries
 #'
 #' @return a complete url as a character string
 #'
 #' @examples
 #'
 #' vms_api("hi", bye = 21)
-#' vms_api("csquares")
+#' vms_api("csquares", argument1 = 2021, argument2 = NULL)
 #'
 #' @importFrom httr parse_url build_url GET
 #'

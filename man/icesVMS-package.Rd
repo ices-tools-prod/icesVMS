@@ -18,7 +18,7 @@ users to download summaries and data products from the ICES VMS and logbook data
 }
 }
 \references{
-ICES web services: \url{https://www.ices.dk/data/tools/Pages/webservices.aspx}.
+ICES VMS and Logbook Database web services: \url{https://data.ices.dk/vms/webservices}.
 }
 \author{
 Colin Millar.

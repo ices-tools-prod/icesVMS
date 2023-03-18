@@ -16,13 +16,13 @@ get_csquare(c_square, stat_rec, ices_area, ecoregion, convert2sf = FALSE)
 \item{ecoregion}{ICES ecoregion}
 
 \item{convert2sf}{logical, default FALSE, should an simple features object
-be returned if the \code{sf} pakcage is installed?}
+be returned if the \code{sf} package is installed?}
 }
 \value{
 a data.frame of VMS data
 }
 \description{
-Download a data.frame of informatation on a set of C-squares.
+Download a data.frame of information on a set of C-squares.
 }
 \details{
 If the \code{sf} package is installed then a simple features object
@@ -34,7 +34,6 @@ sq40F3 <- get_csquare(stat_rec = "40F3")
 
 # if the sf package is installed, an simple feature object will be returned
  NS <- get_csquare(ecoregion = "Greater North Sea", convert2sf = TRUE)
- if (has_sf())
-  plot(NS["ices_area"], border = "transparent")
+ plot(NS["ices_area"], border = "transparent")
 }
 }

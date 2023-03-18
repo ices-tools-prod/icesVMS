@@ -9,7 +9,7 @@ vms_api(service, ...)
 \arguments{
 \item{service}{the name of the service}
 
-\item{...}{name arguments will be added as queries}
+\item{...}{named arguments will be added as queries}
 }
 \value{
 a complete url as a character string
@@ -20,6 +20,6 @@ utility to build a url with optional query arguments
 \examples{
 
 vms_api("hi", bye = 21)
-vms_api("csquares")
+vms_api("csquares", argument1 = 2021, argument2 = NULL)
 
 }

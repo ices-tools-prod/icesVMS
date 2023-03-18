@@ -14,3 +14,9 @@ Download a data.frame of gear contact models for
 'benthis' gear categories used in calculating
 the swept area of a fishing gear.
 }
+\examples{
+\donttest{
+benthis_pars <- get_benthis_parameters()
+}
+
+}

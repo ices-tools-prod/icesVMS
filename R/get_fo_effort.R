@@ -7,16 +7,20 @@
 #'
 #' @return a data.frame
 #'
+#' @examples
+#' \dontrun{
+#' # requires authorization
+#' ns_effort_data <- get_fo_effort("Greater North Sea")
+#' }
+#' 
 #' @export
 get_fo_effort <- function(ecoregion) {
-  url <-
-    httr::parse_url(
-      paste0(
-        "https://taf.ices.dk/vms/api/fisheriesoverviews/effort/",
-        utils::URLencode(ecoregion)
-      )
+  check_ecoregion(ecoregion)
+  
+  url <- 
+    vms_api(
+      glue("fisheriesoverviews/effortmap/{URLencode(ecoregion)}")
     )
-  url <- httr::build_url(url)
 
-  vms_get(url)
+  vms_get(url, use_token = TRUE)
 }

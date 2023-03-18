@@ -12,21 +12,24 @@
 #' @return text message from the screening process
 #'
 #' @examples
-#'
 #' \dontrun{
+#' # requires authorization
 #' filename <- system.file("test_files/vms_test.csv", package = "icesVMS")
 #' screen_vms_file(filename)
 #' }
+#'
+#' @importFrom httr upload_file
+#' @importFrom httr content
 #' @export
 screen_vms_file <- function(file, verbose = FALSE) {
   url <- "https://data.ices.dk/vms/webapi/ScreenVMSFile"
 
   body <-
     list(
-      fileToScreen = httr::upload_file(file)
+      fileToScreen = upload_file(file)
     )
 
   resp <- vms_post(url, body, verbose = verbose, use_token = TRUE)
 
-  httr::content(resp)
+  content(resp)
 }

@@ -22,7 +22,7 @@
 #' @author Colin Millar.
 #'
 #' @references
-#' ICES web services: \url{https://www.ices.dk/data/tools/Pages/webservices.aspx}.
+#' ICES VMS and Logbook Database web services: \url{https://data.ices.dk/vms/webservices}.
 #'
 
 NA
