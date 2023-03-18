@@ -25,7 +25,7 @@ category averaged over 4 years.
 The spatial data.frame contains average annual mega Watt fishing hours,
 averaged over 4 years.
 
-Available ecoregions are given in the description feild of the ICES
+Available ecoregions are given in the description field of the ICES
 ecoregion vocabulary <http://vocab.ices.dk/?ref=1414>
 }
 \examples{

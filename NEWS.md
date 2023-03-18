@@ -1,8 +1,12 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+# icesVMS 1.1.3
+
+* Added examples to all exported functions
+* Internal refactoring to simplify maintenence
 
 # icesVMS 1.1.0
 
-- Same as previous version.
+* Same as previous version.
 
 
 # icesVMS 1.0.0.9022
@@ -90,5 +94,3 @@
 # icesVMS 1.0.0.9000
 
 - Internal changes only.
-
-

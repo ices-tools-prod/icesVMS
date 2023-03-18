@@ -20,8 +20,3 @@ check_ecoregion <- function(ecoregion, stop.on.fail = TRUE) {
   
   ok
 }
-
-#' @importFrom icesVocab getCodeList
-get_ecoregion_list <- function() {
-  getCodeList(code_type = "Ecoregion")$Description
-}
