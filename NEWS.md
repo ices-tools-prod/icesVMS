@@ -2,6 +2,7 @@
 # icesVMS 1.1.3
 
 * Added examples to all exported functions
+* Added functions to check vocabuluries: check_ecoregion(), check_stat_recs()
 * Internal refactoring to simplify maintenence
 
 # icesVMS 1.1.0

@@ -19,7 +19,7 @@ a character vector
 Get a list of vocabularies such as country codes or ecoregions.
 }
 \examples{
-
+\donttest{
 ecoregions <- get_ecoregion_list()
 "Celtic Seas" \%in\% ecoregions
 
@@ -28,5 +28,5 @@ stat_recs <- get_stat_rec_list()
 
 countries <- get_country_list()
 "DK" \%in\% countries
-
+}
 }

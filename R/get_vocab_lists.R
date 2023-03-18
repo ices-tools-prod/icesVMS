@@ -5,7 +5,7 @@
 #' @return a character vector
 #'
 #' @examples
-#'
+#' \donttest{
 #' ecoregions <- get_ecoregion_list()
 #' "Celtic Seas" %in% ecoregions
 #' 
@@ -14,7 +14,7 @@
 #'
 #' countries <- get_country_list()
 #' "DK" %in% countries
-#'
+#' }
 #' @importFrom icesVocab getCodeList
 #' 
 #' @rdname getVocabLists

@@ -10,13 +10,3 @@ convert_df2sf <- function(obj, crs = 4326) {
 
   obj
 }
-
-check_ecoregion <- function(ecoregion, stop.on.fail = TRUE) {
-  ok <- ecoregion %in% get_ecoregion_list()
-  
-  if (!ok && stop.on.fail) {
-    stop(glue("ecoregion = '{ecoregion}' is not valid. For valid options see: \n\nget_ecoregion_list()"))
-  }
-  
-  ok
-}
