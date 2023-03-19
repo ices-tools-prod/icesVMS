@@ -17,7 +17,7 @@ a data.frame of VMS summary data
 Download a summary of submitted data
 }
 \examples{
-\donttest{
+\dontrun{
 upload_summary <- get_upload_summary()
 }
 
