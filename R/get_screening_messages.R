@@ -12,7 +12,7 @@
 #' }
 #' @export
 get_screening_messages <- function(sessionId) {
-  url <- glue("https://data.ices.dk/vms/webapi/getScreeningSessionMessages/{sessionId}")
-
-  vms_get(url)
+  vms_get(
+    glue("https://data.ices.dk/vms/webapi/getScreeningSessionMessages/{sessionId}")
+  )
 }

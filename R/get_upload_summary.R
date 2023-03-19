@@ -8,7 +8,7 @@
 #' @return a data.frame of VMS summary data
 #' 
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' upload_summary <- get_upload_summary()
 #' }
 #' 
