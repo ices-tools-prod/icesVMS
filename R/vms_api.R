@@ -12,7 +12,7 @@
 #' vms_api("hi", bye = 21)
 #' vms_api("csquares", argument1 = 2021, argument2 = NULL)
 #'
-#' @importFrom httr parse_url build_url GET
+#' @importFrom httr parse_url build_url
 #'
 #' @export
 vms_api <- function(service, ...) {
