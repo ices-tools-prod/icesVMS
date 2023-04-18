@@ -1,5 +1,5 @@
 Package: icesVMS
-Version: 1.1.4
+Version: 1.1.5
 Title: Link to the ICES Vessel Monitoring System and Logbook Database Web Services
 Authors@R: c(person("Colin", "Millar", role=c("aut","cre"), email="colin.millar@ices.dk"),
              person("Carlos", "Pinto", role="ctb"))
