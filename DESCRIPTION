@@ -6,9 +6,10 @@ Authors@R: c(person("Colin", "Millar", role=c("aut","cre"), email="colin.millar@
 Imports: glue,
           httr,
           icesConnect (>= 1.0.0),
-          icesVocab
+          icesVocab,
+          icesDatsuQC (>= 1.1.0)
 Suggests: sf
-Description: Links to the ICES Vessel Monitoring System (VMS) and logbook database web services 
+Description: Links to the ICES Vessel Monitoring System (VMS) and logbook database web services
   <https://data.ices.dk/vms/webservices> to allow users to download summaries and data products.
 License: GPL (>= 2)
 URL: https://data.ices.dk/vms, https://github.com/ices-tools-prod/icesVMS

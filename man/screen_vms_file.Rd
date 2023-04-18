@@ -4,12 +4,14 @@
 \alias{screen_vms_file}
 \title{Screen a VMS file and submit for QC checks}
 \usage{
-screen_vms_file(file, verbose = FALSE)
+screen_vms_file(filename, verbose = FALSE, force = FALSE)
 }
 \arguments{
-\item{file}{file name of the file containing the data to screen}
+\item{filename}{file name of the file containing the data to screen}
 
 \item{verbose}{return verbose information about the POST request}
+
+\item{force}{force submission even if checks to do not pass}
 }
 \value{
 text message from the screening process
@@ -25,6 +27,9 @@ This file can be later pushed to the database by the same user.
 \dontrun{
 # requires authorization
 filename <- system.file("test_files/vms_test.csv", package = "icesVMS")
+screen_vms_file(filename)
+
+filename <- system.file("test_files/vms_test_ok.csv", package = "icesVMS")
 screen_vms_file(filename)
 }
 
