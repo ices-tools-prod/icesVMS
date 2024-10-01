@@ -37,7 +37,7 @@ get_effort_map <- function(ecoregion, year = NULL, convert2sf = FALSE) {
   url <-
     vms_api(
       glue("fisheriesoverviews/effortmap/{URLencode(ecoregion)}"),
-      year = 2022
+      year = year
     )
 
   out <- vms_get(url, use_token = TRUE)
