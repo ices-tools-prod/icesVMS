@@ -10,7 +10,7 @@
 #' \donttest{
 #' benthis_pars <- get_benthis_parameters()
 #' }
-#' 
+#'
 #' @export
 get_benthis_parameters <- function() {
   vms_get(

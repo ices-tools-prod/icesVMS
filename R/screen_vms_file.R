@@ -26,7 +26,13 @@
 #' @importFrom httr upload_file
 #' @export
 screen_vms_file <- function(filename, verbose = FALSE, force = FALSE) {
+
+  # is first line column headers?
   type <- scan(filename, "", n = 1, sep = ",", quiet = TRUE)
+  if (type == "RecordType") {
+    type <- scan(filename, "", n = 1, sep = ",", quiet = TRUE, skip = 1)
+  }
+
   message(glue("Assuming record type is {type}"))
 
   if (verbose) {
@@ -72,6 +78,6 @@ screen_vms_file <- function(filename, verbose = FALSE, force = FALSE) {
 
   msg <- content(resp)
 
-  
+
   msg
 }

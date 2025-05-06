@@ -24,8 +24,8 @@ logical
 Get a list of vocabularies such as country codes or ecoregions.
 }
 \examples{
-\donttest{
-check_ecoregion("Celtic Seas")
+\dontrun{
+check_ecoregion("Celtic Seas", stop.on.fail = FALSE)
 
 check_stat_recs("40F1")
 

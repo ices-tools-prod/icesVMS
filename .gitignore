@@ -36,3 +36,5 @@ vignettes/*.pdf
 rsconnect/
 # JWT token for access to ICES vms web services
 .ices-jwt
+
+/test_data/

@@ -7,3 +7,4 @@ README.bib
 LICENSE
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
+^test_data$

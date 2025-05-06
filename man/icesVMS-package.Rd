@@ -20,6 +20,15 @@ users to download summaries and data products from the ICES VMS and logbook data
 \references{
 ICES VMS and Logbook Database web services: \url{https://data.ices.dk/vms/webservices}.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://data.ices.dk/vms}
+  \item \url{https://github.com/ices-tools-prod/icesVMS}
+  \item Report bugs at \url{https://github.com/ices-tools-prod/icesVMS/issues}
+}
+
+}
 \author{
 Colin Millar.
 }

@@ -1,5 +1,3 @@
-#' @docType package
-#'
 #' @name icesVMS-package
 #'
 #' @aliases icesVMS
@@ -25,4 +23,4 @@
 #' ICES VMS and Logbook Database web services: \url{https://data.ices.dk/vms/webservices}.
 #'
 
-NA
+"_PACKAGE"
