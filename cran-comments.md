@@ -14,6 +14,23 @@ Checked using
   X-CRAN-Comment: Archived on 2024-07-16 for policy violation.
   On Internet access.
 
+and on win-builder
+
+* R Under development (unstable) (2026-10-18 r90707 ucrt)
+* using platform: x86_64-w64-mingw32
+* running under: Windows Server 2022 x64 (build 20348)
+
+0 errors | 0 warnings | 1 note
+
+* checking CRAN incoming feasibility ... NOTE
+  New submission
+  Package was archived on CRAN
+  Possibly misspelled words in DESCRIPTION:
+    VMS (10:58)
+
+  VMS is the acronym for Vessel Monitoring System, which is spelled out in
+  the Description field where the acronym is first used.
+
 ## Resubmission of an archived package
 
 The package was archived because an example run with --run-donttest gave an
