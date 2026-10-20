@@ -38,3 +38,9 @@ rsconnect/
 .ices-jwt
 
 /test_data/
+
+.Rprofile
+
+renv.lock
+
+renv/
