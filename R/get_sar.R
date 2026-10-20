@@ -1,7 +1,10 @@
 #' Download VMS data
 #'
-#' RESTRICTED.  Only core members of the ICES VMS data call can access this data.
-#' Download a data.frame of VMS swept area ratio values from the ICES VMS and logbook database.
+#' DEPRECATED. The ICES VMS web service no longer provides this data, so
+#' this function only gives a warning and returns NULL. Swept area ratio
+#' values by year and metier level 4 are available from the web service
+#' \code{https://data.ices.dk/vms/API/getSARBy_YearAndMetier4_GeoJSON/{year}/{metier4}},
+#' see \url{https://data.ices.dk/vms/webservices}.
 #'
 #' @param year integer year
 #' @param c_square character 0.05 degree c-square name
@@ -12,7 +15,7 @@
 #' @param datacall integer year giving which data call year to inquire about.
 #'   If NULL returns the a summary of the most recent approved data.
 #'
-#' @return a data.frame of VMS data
+#' @return NULL
 #'
 #' @examples
 #' \dontrun{
@@ -24,24 +27,13 @@
 get_sar <- function(year, c_square,
                     gear_code,
                     stat_rec, ices_area, ecoregion, datacall = NULL) {
-  
-  if (!missing(ecoregion)) {
-    check_ecoregion(ecoregion)
-  }
-  
-  args <- lapply(as.list(match.call())[-1], eval, parent.frame())
-  if (any(sapply(args, length) > 1)) {
-    args_grid <- do.call(expand.grid, c(args, KEEP.OUT.ATTRS = FALSE, stringsAsFactors = FALSE))
+  warning(
+    "get_sar() is deprecated: the ICES VMS web service no longer provides this data.\n",
+    "Swept area ratio values by year and metier level 4 are available from:\n",
+    "  https://data.ices.dk/vms/API/getSARBy_YearAndMetier4_GeoJSON/{year}/{metier4}\n",
+    "see https://data.ices.dk/vms/webservices",
+    call. = FALSE
+  )
 
-    args_list <- lapply(1:nrow(args_grid), function(i) as.list(args_grid[i, ]))
-
-    message("running ", length(args_list), " calls to get_sar().")
-    out <- lapply(args_list, function(args) do.call(get_sar, args))
-
-    return(do.call(rbind, out))
-  }
-
-  url <- do.call(vms_api, c("vms/vmssar", args))
-
-  vms_get(url, use_token = TRUE)
+  invisible(NULL)
 }

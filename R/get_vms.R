@@ -3,11 +3,17 @@
 #' RESTRICTED.  Only core members of the ICES VMS data call can access this data.
 #' Download a data.frame of VMS data from the ICES VMS and logbook database.
 #'
-#' @param country country code
-#' @param year integer year
+#' The web service only filters the data by country and year. The arguments
+#' month, c_square, gear_code and metier are applied after the data for the
+#' country and year has been downloaded. The web service can not currently
+#' filter by stat_rec, ices_area, ecoregion or datacall, so these arguments
+#' are ignored, with a warning.
+#'
+#' @param country country code, required
+#' @param year integer year, required
 #' @param month integer month
 #' @param c_square character 0.05 degree c-square name
-#' @param gear_code benthis gear code
+#' @param gear_code gear code
 #' @param metier level 6 metier code
 #' @param stat_rec ICES statistical rectangle
 #' @param ices_area ICES area
@@ -31,20 +37,15 @@ get_vms <- function(country, year, month, c_square,
   if (!missing(ecoregion)) {
     check_ecoregion(ecoregion)
   }
-  
+
   args <- lapply(as.list(match.call())[-1], eval, parent.frame())
-  if (any(sapply(args, length) > 1)) {
-    args_grid <- do.call(expand.grid, c(args, KEEP.OUT.ATTRS = FALSE, stringsAsFactors = FALSE))
 
-    args_list <- lapply(1:nrow(args_grid), function(i) as.list(args_grid[i,]))
-
-    message("running ", length(args_list), " calls to get_vms().")
-    out <- lapply(args_list, function(args) do.call(get_vms, args))
-
-    return (do.call(rbind, out))
-  }
-
-  url <- do.call(vms_api, c("vms", args))
-
-  vms_get(url, use_token = TRUE)
+  get_country_data(
+    "GetVMSData", args,
+    columns = c(
+      month = "month", c_square = "cSquare",
+      gear_code = "gearCode", metier = "leMetLevel6"
+    ),
+    fun = "get_vms"
+  )
 }

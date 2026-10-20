@@ -16,13 +16,13 @@ get_logbook(
 )
 }
 \arguments{
-\item{country}{country code}
+\item{country}{country code, required}
 
-\item{year}{integer year}
+\item{year}{integer year, required}
 
 \item{month}{integer month}
 
-\item{gear_code}{benthis gear code}
+\item{gear_code}{gear code}
 
 \item{metier}{level 6 metier code}
 
@@ -33,11 +33,18 @@ get_logbook(
 \item{ecoregion}{ICES ecoregion}
 }
 \value{
-a data.frame of VMS data
+a data.frame of logbook data
 }
 \description{
 RESTRICTED.  Only core members of the ICES VMS data call can access this data.
-Download a data.frame of VMS data from the ICES VMS and logbook database.
+Download a data.frame of logbook data from the ICES VMS and logbook database.
+}
+\details{
+The web service only filters the data by country and year. The arguments
+month, gear_code, metier and stat_rec are applied after the data for the
+country and year has been downloaded. The web service can not currently
+filter by ices_area or ecoregion, so these arguments are ignored, with a
+warning.
 }
 \examples{
 \dontrun{

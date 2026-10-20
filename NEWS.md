@@ -1,4 +1,26 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+# icesVMS 1.1.6
+
+* the web services have moved to https://data.ices.dk/vms/api, all functions
+  now use this address (#4)
+* functions now fail gracefully if a web service is not available: a message
+  is given and NULL is returned. check_ecoregion(), check_stat_recs() and
+  check_countries() skip the check, with a message, and return NA if the
+  vocabulary can not be downloaded
+* get_vms() and get_logbook() use the new GetVMSData and GetLogbookData web
+  services, and country and year are now required. These services only
+  filter by country and year, so the other arguments are applied after
+  downloading, where possible. Arguments the services can not filter on are
+  ignored, with a warning. The returned columns have new names, set by the
+  web service (e.g. cSquare, gearCode, leMetLevel6)
+* get_sar() is deprecated, as the web service no longer provides this data.
+  It now gives a warning and returns NULL
+* get_screening_details(), get_screening_messages() and screen_vms_file() use
+  the new web service address
+* bugfix: get_effort_map() always returned 2022 data, the year argument was
+  ignored
+* screen_vms_file() now handles files with a header row
+
 # icesVMS 1.1.3
 
 * Added examples to all exported functions

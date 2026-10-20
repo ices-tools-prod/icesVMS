@@ -30,12 +30,12 @@ get_sar(
 \item{datacall}{integer year giving which data call year to inquire about.
 If NULL returns the a summary of the most recent approved data.}
 }
-\value{
-a data.frame of VMS data
-}
 \description{
-RESTRICTED.  Only core members of the ICES VMS data call can access this data.
-Download a data.frame of VMS swept area ratio values from the ICES VMS and logbook database.
+DEPRECATED. The ICES VMS web service no longer provides this data, so
+this function only gives a warning and returns NULL. Swept area ratio
+values by year and metier level 4 are available from the web service
+\code{https://data.ices.dk/vms/API/getSARBy_YearAndMetier4_GeoJSON/{year}/{metier4}},
+see \url{https://data.ices.dk/vms/webservices}.
 }
 \examples{
 \dontrun{
