@@ -13,7 +13,8 @@ get_stat_rec_list()
 get_country_list()
 }
 \value{
-a character vector
+a character vector, or NULL if the ICES vocabulary service
+  could not be reached
 }
 \description{
 Get a list of vocabularies such as country codes or ecoregions.

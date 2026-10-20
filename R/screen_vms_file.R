@@ -67,7 +67,7 @@ screen_vms_file <- function(filename, verbose = FALSE, force = FALSE) {
     }
   }
 
-  url <- "https://data.ices.dk/vms/webapi/ScreenVMSFile"
+  url <- vms_api("ScreenVMSFile")
 
   body <-
     list(

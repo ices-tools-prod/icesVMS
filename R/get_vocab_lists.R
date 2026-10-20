@@ -2,7 +2,8 @@
 #'
 #' Get a list of vocabularies such as country codes or ecoregions.
 #'
-#' @return a character vector
+#' @return a character vector, or NULL if the ICES vocabulary service
+#'   could not be reached
 #'
 #' @examples
 #' \donttest{
@@ -20,19 +21,33 @@
 #' @rdname getVocabLists
 #' @export
 get_ecoregion_list <- function() {
-  getCodeList(code_type = "Ecoregion")$Description
+  get_vocab_list("Ecoregion", "Description")
 }
 
 #' @rdname getVocabLists
 #'
 #' @export
 get_stat_rec_list <- function() {
-  getCodeList(code_type = "StatRec")$Key
+  get_vocab_list("StatRec", "Key")
 }
 
 #' @rdname getVocabLists
 #'
 #' @export
 get_country_list <- function() {
-  getCodeList(code_type = "ISO_3166")$Key
+  get_vocab_list("ISO_3166", "Key")
+}
+
+# fail gracefully if the vocabulary service is unavailable
+get_vocab_list <- function(code_type, column) {
+  codes <-
+    tryCatch(
+      getCodeList(code_type = code_type),
+      error = function(e) {
+        message("Could not download the ", code_type, " vocabulary: ", conditionMessage(e))
+        NULL
+      }
+    )
+
+  codes[[column]]
 }

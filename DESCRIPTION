@@ -14,7 +14,7 @@ Description: Links to the ICES Vessel Monitoring System (VMS) and logbook databa
 License: GPL (>= 2)
 URL: https://data.ices.dk/vms, https://github.com/ices-tools-prod/icesVMS
 Encoding: UTF-8
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Depends: R (>= 4.0)
 LazyData: true
 BugReports: https://github.com/ices-tools-prod/icesVMS/issues

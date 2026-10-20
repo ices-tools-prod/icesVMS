@@ -5,7 +5,8 @@
 #' @param arg one of country code, ICES statistical rectangle or ICES ecoregion
 #' @param stop.on.fail logical, if TRUE function will call stop()
 #'
-#' @return logical
+#' @return logical. If the vocabulary could not be downloaded, the check is
+#'   skipped and NA is returned.
 #'
 #' @examples
 #' \dontrun{
@@ -21,7 +22,13 @@
 #' @rdname checkVocabLists
 #' @export
 check_ecoregion <- function(arg, stop.on.fail = TRUE) {
-  ok <- all(arg %in% get_ecoregion_list())
+  valid <- get_ecoregion_list()
+  if (is.null(valid)) {
+    message("Skipping check, the vocabulary could not be downloaded.")
+    return(NA)
+  }
+
+  ok <- all(arg %in% valid)
 
   if (!ok && stop.on.fail) {
     stop("ecoregion is not valid. For valid options see: \n\nget_ecoregion_list()")
@@ -33,7 +40,13 @@ check_ecoregion <- function(arg, stop.on.fail = TRUE) {
 #' @rdname checkVocabLists
 #' @export
 check_stat_recs <- function(arg, stop.on.fail = TRUE) {
-  ok <- all(arg %in% get_stat_rec_list())
+  valid <- get_stat_rec_list()
+  if (is.null(valid)) {
+    message("Skipping check, the vocabulary could not be downloaded.")
+    return(NA)
+  }
+
+  ok <- all(arg %in% valid)
 
   if (!ok && stop.on.fail) {
     stop("stat_rec is not valid. For valid options see: \n\nget_stat_rec_list()")
@@ -45,7 +58,13 @@ check_stat_recs <- function(arg, stop.on.fail = TRUE) {
 #' @rdname checkVocabLists
 #' @export
 check_countries <- function(arg, stop.on.fail = TRUE) {
-  ok <- all(arg %in% get_country_list())
+  valid <- get_country_list()
+  if (is.null(valid)) {
+    message("Skipping check, the vocabulary could not be downloaded.")
+    return(NA)
+  }
+
+  ok <- all(arg %in% valid)
 
   if (!ok && stop.on.fail) {
     stop("country is not valid. For valid options see: \n\n get_country_list()")

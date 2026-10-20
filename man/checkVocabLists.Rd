@@ -18,7 +18,8 @@ check_countries(arg, stop.on.fail = TRUE)
 \item{stop.on.fail}{logical, if TRUE function will call stop()}
 }
 \value{
-logical
+logical. If the vocabulary could not be downloaded, the check is
+  skipped and NA is returned.
 }
 \description{
 Get a list of vocabularies such as country codes or ecoregions.
